@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HÀNH TRÌNH LỊCH SỬ</title>
+    <link rel="stylesheet" href="./styles/game.css">
+    <link rel="shortcut icon" href="./assets/icon.ico">
+</head>
+<body>
+    <div id="noti"></div>
+
+    <div id="board">
+        <div class="quiz-container">
+            <div class="quiz-header">
+                <h2 id="question">Câu hỏi sẽ xuất hiện ở đây?</h2>
+                <div class="quiz-progress">
+                    <span id="current-question">1</span>/<span id="total-questions">10</span>
+                </div>
+            </div>
+            
+            <div class="options-container">
+                <div class="option" data-index="0">
+                    <span class="option-letter">A</span>
+                    <span class="option-text">Câu trả lời thứ nhất</span>
+                </div>
+                
+                <div class="option" data-index="1">
+                    <span class="option-letter">B</span>
+                    <span class="option-text">Câu trả lời thứ hai</span>
+                </div>
+                
+                <div class="option" data-index="2">
+                    <span class="option-letter">C</span>
+                    <span class="option-text">Câu trả lời thứ ba</span>
+                </div>
+                
+                <div class="option" data-index="3">
+                    <span class="option-letter">D</span>
+                    <span class="option-text">Câu trả lời thứ tư</span>
+                </div>
+            </div>
+            
+            <div class="quiz-footer">
+                <div class="timer">
+                    <i class="fas fa-clock"></i>
+                    <span id="time-left">30</span>
+                </div>
+                <button id="next-btn" class="btn">Câu tiếp theo</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="road">
+        <img src="./assets/road.png" alt="">
+        <img src="./assets/road.png" alt="">
+        <img src="./assets/road.png" alt="">
+        <img src="./assets/road.png" alt="">
+    </div>
+
+    <div id="player">
+        <img src="./assets/player_sprint/run000.png" alt="">
+    </div>
+
+    <div id="main-bg">
+        <img src="./assets/bg.png" alt="">
+    </div>
+
+    <div id="score-text">
+        <p id="score">Điểm</p>
+        <p id="highscore">Kỉ lục</p>
+    </div>
+
+    <div id="title">
+        <h2>Cuộc thi</h2>
+        <h1>HÀNH TRÌNH LỊCH SỬ</h1>
+        <p>Kỷ niệm 50 năm ngày Giải phóng miền Nam, thống nhất đất nước</p>
+        <i>30/4/1975 - 30/4/2025</i>
+    </div>
+
+    <div id="win-summary" class="summary-container">
+        <div class="summary-content">
+            <h2>CHIẾN THẮNG!</h2>
+            <div class="trophy-icon">🏆</div>
+            <div class="summary-stats">
+                <div class="stat-item">
+                    <span class="stat-label">Điểm số:</span>
+                    <span id="final-score" class="stat-value">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Thời gian:</span>
+                    <span id="total-time" class="stat-value">00:00</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Câu hỏi đúng:</span>
+                    <span id="correct-answers" class="stat-value">0/10</span>
+                </div>
+            </div>
+            <button id="restart-btn" class="summary-btn">Chơi lại</button>
+            <button id="home-btn" class="summary-btn">Quay về trang chủ</button>
+        </div>
+    </div>
+
+    <div id="pause-menu" class="pause-menu">
+        <div class="pause-content">
+            <h2>Tạm Dừng</h2>
+            <button id="resume-btn" class="pause-btn">Tiếp Tục</button>
+            <button id="restart-btn-pause" class="pause-btn">Chơi Lại</button>
+            <button id="menu-btn" class="pause-btn">Về Menu Chính</button>
+        </div>
+    </div>
+ 
+    <script type="module" src="./scripts/audio.js"></script>
+    <script type="module" src="./scripts/noti.js"></script>
+    <script type="module" src="./scripts/app.js"></script>
+</body>
+</html>

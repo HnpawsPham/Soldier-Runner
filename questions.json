@@ -1,0 +1,114 @@
+{
+    "questions": [
+      {
+        "id": 1,
+        "question": "Trong JavaScript, phương thức nào được sử dụng để thêm một phần tử vào cuối mảng?",
+        "options": [
+          "push()",
+          "append()",
+          "addToEnd()",
+          "insert()"
+        ],
+        "correctAnswer": 0
+      },
+      {
+        "id": 2,
+        "question": "Đâu là ngôn ngữ lập trình được sử dụng để tạo kiểu cho trang web?",
+        "options": [
+          "HTML",
+          "JavaScript",
+          "CSS",
+          "Python"
+        ],
+        "correctAnswer": 2
+      },
+      {
+        "id": 3,
+        "question": "Phương thức nào được sử dụng để chọn một phần tử HTML bằng ID trong JavaScript?",
+        "options": [
+          "querySelector()",
+          "getElementById()",
+          "selectElement()",
+          "findById()"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "id": 4,
+        "question": "Thuộc tính nào được sử dụng để thay đổi màu chữ trong CSS?",
+        "options": [
+          "text-color",
+          "font-color",
+          "color",
+          "text-style"
+        ],
+        "correctAnswer": 2
+      },
+      {
+        "id": 5,
+        "question": "Đâu là cú pháp đúng để tạo một vòng lặp for trong JavaScript?",
+        "options": [
+          "for (i = 0; i < 5; i++)",
+          "for (i < 5; i++)",
+          "for i = 1 to 5",
+          "loop (i = 0; i < 5)"
+        ],
+        "correctAnswer": 0
+      },
+      {
+        "id": 6,
+        "question": "Phương thức nào được sử dụng để làm tròn một số đến số nguyên gần nhất trong JavaScript?",
+        "options": [
+          "Math.round()",
+          "Math.floor()",
+          "Math.ceil()",
+          "Math.random()"
+        ],
+        "correctAnswer": 0
+      },
+      {
+        "id": 7,
+        "question": "Đâu là cách đúng để khai báo một biến trong JavaScript?",
+        "options": [
+          "variable x;",
+          "var x;",
+          "x = var;",
+          "declare x;"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "id": 8,
+        "question": "Thuộc tính nào được sử dụng để thay đổi kích thước font chữ trong CSS?",
+        "options": [
+          "text-size",
+          "font-style",
+          "text-style",
+          "font-size"
+        ],
+        "correctAnswer": 3
+      },
+      {
+        "id": 9,
+        "question": "Phương thức nào được sử dụng để xóa phần tử cuối cùng của mảng trong JavaScript?",
+        "options": [
+          "pop()",
+          "remove()",
+          "delete()",
+          "splice()"
+        ],
+        "correctAnswer": 0
+      },
+      {
+        "id": 10,
+        "question": "Đâu là cách đúng để viết một câu lệnh if trong JavaScript?",
+        "options": [
+          "if x = 5 then",
+          "if (x == 5)",
+          "if x == 5",
+          "if x = 5"
+        ],
+        "correctAnswer": 1
+      }
+    ]
+  }
