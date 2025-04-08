@@ -1,6 +1,6 @@
 const backgroundMusic = new Audio();
 let currentTrack = 1;
-const totalTracks = 3; 
+const totalTracks = 17; 
 let isPlaying = false;
 
 const winSound = new Audio('./assets/audios/win.mp3');
@@ -12,7 +12,7 @@ function randomizeMusic() {
     const randomTrack = Math.floor(Math.random() * totalTracks) + 1;
     currentTrack = randomTrack;
     
-    backgroundMusic.src = `./assets/audios/${currentTrack}.mp3`;
+    backgroundMusic.src = `./assets/audios/track (${currentTrack}).mp3`;
     backgroundMusic.loop = true;
     backgroundMusic.volume = 0.5; 
 }
