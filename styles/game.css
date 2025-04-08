@@ -17,7 +17,7 @@ body {
 }
 
 #noti {
-    margin-top: -80vh !important;
+    margin-top: 2vh !important;
 }
 
 #title h2 {
@@ -70,7 +70,7 @@ body {
 #score-text{
     z-index: 11;
     position: fixed;
-    margin: -21vh 0 0 85vw;
+    margin:  5vh 0 0 85vw;
     color: white;
     font-size: 20px;
     font-weight: bold;
@@ -456,7 +456,7 @@ body {
     }
 
     #score-text {
-        margin: -18vh 0 0 80vw;
+        margin: 4vh 0 0 80vw;
         font-size: 18px;
     }
 }
@@ -479,7 +479,7 @@ body {
     }
 
     #score-text {
-        margin: -15vh 0 0 75vw;
+        margin: 3vh 0 0 75vw;
         font-size: 16px;
     }
 }
@@ -508,7 +508,7 @@ body {
     }
 
     #score-text {
-        margin: -12vh 0 0 70vw;
+        margin: 2vh 0 0 70vw;
         font-size: 14px;
     }
 }
@@ -537,7 +537,7 @@ body {
     }
 
     #score-text {
-        margin: -10vh 0 0 65vw;
+        margin: 2vh 0 0 65vw;
         font-size: 12px;
     }
 }
@@ -560,7 +560,7 @@ body {
     }
 
     #score-text {
-        margin: -8vh 0 0 60vw;
+        margin: 1vh 0 0 60vw;
         font-size: 10px;
     }
 }
@@ -591,7 +591,7 @@ body {
     }
 
     #score-text {
-        margin: -10vh 0 0 80vw;
+        margin: 1vh 0 0 80vw;
         font-size: 12px;
     }
 }
@@ -614,7 +614,7 @@ body {
     }
 
     #score-text {
-        margin: -6vh 0 0 55vw;
+        margin: 1vh 0 0 55vw;
         font-size: 9px;
     }
 }

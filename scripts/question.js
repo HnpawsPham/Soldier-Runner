@@ -1,5 +1,5 @@
 export let questions = [];
-const totalQuestion = 50;
+const totalQuestion = 40;
 export let currentQuestionIndex = 0;
 
 export async function loadQuestions() {
@@ -16,7 +16,7 @@ export async function loadQuestions() {
 }
 
 export function getNextQuestion() {
-    if (currentQuestionIndex >= 50) {
+    if (currentQuestionIndex >= totalQuestion) {
         currentQuestionIndex = 0;
      
         shuffleArray(questions);

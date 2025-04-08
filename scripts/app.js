@@ -23,6 +23,7 @@ const player = document.getElementById("player");
 const scoreText = document.getElementById("score");
 const highScoreText = document.getElementById("highscore");
 const board = document.getElementById("board");
+const summaryContainer = document.getElementById('win-summary');
 
 // Question elements
 const questionElement = document.getElementById("question");
@@ -228,7 +229,7 @@ function createObstacle() {
     
     // Check if there's an obstacle too close to the right edge
     const lastObstacle = obstacles[obstacles.length - 1];
-    if (lastObstacle && window.innerWidth - lastObstacle.position < 500) {
+    if (lastObstacle && window.innerWidth - lastObstacle.position < 1000) {
         // Don't create a new obstacle if the last one is too close to the edge
         setTimeout(createObstacle, 500);
         return;
@@ -247,7 +248,7 @@ function createObstacle() {
     const obstacle = document.createElement('div');
     obstacle.className = 'obstacle';
     // random width
-    obstacle.style.width = Math.floor(Math.random() * (140 - 90 + 1)) + 70 + 'px';
+    obstacle.style.width = Math.floor(Math.random() * (120 - 90 + 1)) + 90 + 'px';
     
     // Create image 
     const img = document.createElement('img');
@@ -314,14 +315,14 @@ function updateObstacles() {
 const HITBOX_OFFSETS = {
     player: {
         running: {
-            left: 200,
-            right: 230,
+            left: 210,
+            right: 240,
             top: 150,
             bottom: 20
         },
         jumping: {
-            left: 200,
-            right: 230,
+            left: 210,
+            right: 240,
             top: 150,
             bottom: 300
         }
@@ -370,8 +371,9 @@ function checkCollision(obstacle) {
 //#endregion
 
 //#region HANDLE GAME WIN & OVER
+let gameOverKeydownListener = null;
 
-function handleGameOver() {
+async function handleGameOver() {
     gameOver = true;
     clearInterval(runAnimInterval);
     clearInterval(obstacleInterval);
@@ -381,10 +383,57 @@ function handleGameOver() {
 
     if (isQuestionActive) 
         hideQuestion();
+
+    if (gameOverKeydownListener) {
+        document.removeEventListener('keydown', gameOverKeydownListener);
+    }
     
+    visibleNoti("Bạn đã thua! Nhấn Enter để chơi lại hoặc S để lưu kết quả.", 10000);
+    document.addEventListener('keydown', async (e) => {
+        if(e.key == "Enter") restartGame();
+        else if (e.key === "s" || e.key === "S") 
+            await prepareSaveGame();
+        
+    });
+}
+
+async function prepareSaveGame(){
+    const gameTime = Math.floor((Date.now() - gameStartTime) / 1000);
+    const minutes = Math.floor(gameTime / 60);
+    const seconds = gameTime % 60;
+    const formattedTime = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
     
-    visibleNoti("Bạn đã thua! Nhấn Enter để chơi lại.", 10000);
-    document.addEventListener('keydown', restartGame);
+    document.getElementById('final-score').textContent = score;
+    document.getElementById('total-time').textContent = formattedTime;
+    document.getElementById('correct-answers').textContent = `${correctAns}/${totalQuestion}`;
+    
+    // Check if user is authenticated
+    const uid = auth.currentUser ? auth.currentUser.uid : null;
+
+    if (uid) try {
+        await saveGameRes(score, formattedTime, correctAns);
+        playWinSound();
+        summaryContainer.classList.add('active');
+
+        // Restart game btn
+        document.getElementById('restart-btn').onclick = function() {
+            summaryContainer.classList.remove('active');
+            restartGame();
+        };
+        
+        // Return to homepage btn
+        document.getElementById('home-btn').onclick = function() {
+            window.location.href = "./index.html";
+        };
+
+        visibleNoti("Đã lưu kết quả thành công!", 3000);
+    } 
+    catch (err) {
+        console.err(err);
+        visibleNoti("Có lỗi xảy ra khi lưu kết quả!", 3000);
+    }
+    
+    else visibleNoti("Bạn cần đăng nhập để lưu kết quả!", 3000); 
 }
 
 function checkWin() {
@@ -399,75 +448,43 @@ function handleWin() {
     clearInterval(roadLoop);
     
     playWinSound();
-    
-    const gameTime = Math.floor((Date.now() - gameStartTime) / 1000);
-    const minutes = Math.floor(gameTime / 60);
-    const seconds = gameTime % 60;
-    const formattedTime = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-    
-    document.getElementById('final-score').textContent = score;
-    document.getElementById('total-time').textContent = formattedTime;
-    document.getElementById('correct-answers').textContent = `${correctAns}/${totalQuestion}`;
-    
-    // Check if user is authenticated
-    const auth = getAuth(app);
-    const uid = auth.currentUser ? auth.currentUser.uid : null;
-
-    if (uid) saveGameRes(score, formattedTime, correctAns);
-    
-    else  visibleNoti("Bạn cần đăng nhập để lưu kết quả!", 3000); 
-    
-
-    const summaryContainer = document.getElementById('win-summary');
-    summaryContainer.classList.add('active');
-    
-    // Restart game
-    document.getElementById('restart-btn').onclick = function() {
-        summaryContainer.classList.remove('active');
-        restartGame({ type: 'click' });
-    };
-    
-    // Return to homepage
-    document.getElementById('home-btn').onclick = function() {
-        window.location.href = "./index.html";
-    };
+    prepareSaveGame();
 }
 
 function restartGame(e) {
-    if ((e.code === 'Enter' && gameOver) || e.type === 'click') {
-        document.removeEventListener('keydown', restartGame);
-        stopAllSounds(); 
-        
-        // Reset game 
-        gameOver = false;
-        score = 0;
-        updateScore();
-        
-        // Reset game speed
-        obstacleSpeed = 10; 
-        roadSpeed = 120; 
-        minObstacleInterval = 1800;
-        maxObstacleInterval = 3500;
+    if(!gameOver) return;
 
-        // Reset
-        gameStartTime = Date.now();
-        correctAns = 0;
-        questionCounter = 0;
-        
-        // Remove all obstacles
-        obstacles.forEach(obstacle => obstacle.element.remove());
-        obstacles.length = 0; 
-        
-        // Reset player
-        player.style.top = `${originalPos}px`;
-        isJumping = false;
-        isGrounded = true;
-        
-        restartWithNewTrack(); 
-        startRunAnim();
-        startGameLoops();
-        visibleNoti("Trò chơi bắt đầu lại! Chúc bạn may mắn.", 2000);
-    }
+    summaryContainer.classList.remove('active');
+    stopAllSounds(); 
+    
+    // Reset game 
+    gameOver = false;
+    score = 0;
+    updateScore();
+    
+    // Reset game speed
+    obstacleSpeed = 10; 
+    roadSpeed = 120; 
+    minObstacleInterval = 1800;
+    maxObstacleInterval = 3500;
+
+    // Reset
+    gameStartTime = Date.now();
+    correctAns = 0;
+    questionCounter = 0;
+    
+    // Remove all obstacles
+    obstacles.forEach(obstacle => obstacle.element.remove());
+    obstacles.length = 0; 
+    
+    // Reset player
+    player.style.top = `${originalPos}px`;
+    isJumping = false;
+    isGrounded = true;
+    
+    restartWithNewTrack(); 
+    startRunAnim();
+    startGameLoops();
 }
 
 function updateRoad() {
@@ -502,7 +519,7 @@ function startGameLoops() {
 
 // #region QUESTIONS
 
-const totalQuestion = 50;
+const totalQuestion = 40;
 
 let questionTimer;
 let currentQuestion;
