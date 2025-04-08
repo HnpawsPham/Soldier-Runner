@@ -559,7 +559,7 @@ function showQuestion() {
     
     // Update question counter
     currentQuestionElement.textContent = questionCounter;
-    totalQuestionsElement.textContent = questions.length;
+    totalQuestionsElement.textContent = totalQuestion;
     
     // Show board
     board.style.display = 'flex';

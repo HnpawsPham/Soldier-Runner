@@ -84,37 +84,64 @@ form.addEventListener("submit", async (event) => {
 //#region LEADERBOARD
 async function loadLeaderboard() {
     const leaderboardData = await getData('result'); 
-    const usersData = await getData('users'); // Fetch users data
+    const usersData = await getData('users'); 
+
     const leaderboardBody = document.getElementById('leaderboard-body');
     leaderboardBody.innerHTML = ''; 
 
     if (leaderboardData) {
-        // Iterate through each user ID in the leaderboard data
+        const entries = [];
+    
         Object.entries(leaderboardData).forEach(([uid, timestamps]) => {
-            // Iterate through each timestamp for the user
             Object.entries(timestamps).forEach(([timestamp, res]) => {
-                const entry = {
+                let totalTimeInSeconds = 0;
+                if (res.totalTime && res.totalTime !== 'N/A') {
+                    const timeParts = res.totalTime.split(':');
+                    if (timeParts.length === 2) {
+                        totalTimeInSeconds = parseInt(timeParts[0]) * 60 + parseInt(timeParts[1]);
+                    }
+                }
+    
+                entries.push({
                     uid,
-                    name: usersData && usersData[uid] ? usersData[uid].name : 'Người chơi', // Get user name from users data
-                    score: res.score || 0, // Default to 0 if score is undefined
-                    totalTime: res.totalTime || 'N/A', // Default to 'N/A' if totalTime is undefined
-                    formattedTime: new Date(parseInt(timestamp)).toLocaleString() // Format timestamp for display
-                };
-
-                // Create a new row for the leaderboard
-                const row = document.createElement('tr');
-                row.innerHTML = `
-                    <td>${leaderboardBody.children.length + 1}</td>
-                    <td>${entry.name}</td>
-                    <td>${entry.score}</td>
-                    <td>${entry.totalTime}</td>
-                    <td>${entry.formattedTime}</td> <!-- Display formatted timestamp -->
-                `;
-                leaderboardBody.appendChild(row);
+                    name: usersData && usersData[uid] ? usersData[uid].name : 'Người chơi',
+                    score: res.score || 0,
+                    totalTime: res.totalTime || 'N/A',
+                    totalTimeInSeconds: totalTimeInSeconds,
+                    formattedTime: new Date(parseInt(timestamp)).toLocaleString(),
+                    timestamp: parseInt(timestamp)
+                });
             });
         });
+    
+        entries.sort((a, b) => {
+            if (b.score !== a.score) {
+                return b.score - a.score;
+            }
+    
+            if (a.totalTimeInSeconds !== b.totalTimeInSeconds) {
+                return a.totalTimeInSeconds - b.totalTimeInSeconds;
+            }
+    
+            return b.timestamp - a.timestamp;
+        });
+    
+        // top 10
+        const top10Entries = entries.slice(0, 10);
+    
+        top10Entries.forEach((entry, index) => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${index + 1}</td>
+                <td>${entry.name}</td>
+                <td>${entry.score}</td>
+                <td>${entry.totalTime}</td>
+                <td>${entry.formattedTime}</td>
+            `;
+            leaderboardBody.appendChild(row);
+        });
     } else {
-        leaderboardBody.innerHTML = '<tr><td colspan="5">Chưa có dữ liệu.</td></tr>'; // Message when no data
+        leaderboardBody.innerHTML = '<tr><td colspan="5">Chưa có dữ liệu.</td></tr>';
     }
 }
 
