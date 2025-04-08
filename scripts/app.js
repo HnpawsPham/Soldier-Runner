@@ -454,7 +454,7 @@ function startGameLoops() {
 
 // #region QUESTIONS
 
-const totalQuestion = 2;
+const totalQuestion = 100;
 
 let questionTimer;
 let currentQuestion;
