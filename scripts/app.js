@@ -37,7 +37,7 @@ let gameStartTime = Date.now();
 
 // #region ROAD
 let roadImgWidth = roadImgs[0].getBoundingClientRect().width;
-let roadSpeed = 120;
+let roadSpeed = 90;
 let roadPos = Array.from(roadImgs).map((img, index) => index * roadImgWidth);
 
 // INIT ROADS POSITION
@@ -56,6 +56,38 @@ let roadLoop = setInterval(function () {
             roadPos[i] += roadImgWidth * roadImgs.length;
     }
 }, roadSpeed); 
+
+function adjustPlayerPos() {
+    const road = document.querySelector("#road img");
+    if (!road) return;
+    
+    const roadRect = road.getBoundingClientRect();
+    const roadHeight = roadRect.height;
+    
+    // Adjust player pos
+    const player = document.getElementById("player");
+    if (player) {
+        const playerBottomOffset = roadHeight * 0.2;
+        player.style.bottom = `${playerBottomOffset}px`;
+    }
+}
+
+// Adjust player and obstacle pos on road
+window.addEventListener('load', adjustPlayerPos);
+window.addEventListener('resize', adjustPlayerPos);
+
+
+function adjustObstaclePos(obstacle) {
+    const road = document.querySelector("#road img");
+    if (!road || !obstacle) return;
+    
+    const roadRect = road.getBoundingClientRect();
+    const roadHeight = roadRect.height;
+    
+    const obstacleBottomOffset = roadHeight * 0.16;
+    obstacle.style.bottom = `${obstacleBottomOffset}px`;
+}
+
 // #endregion
 
 // #region PLAYER
@@ -139,7 +171,8 @@ function prepareLanding() {
         isGrounded = true;
         landingTimer = null;
         
-        startRunAnim();
+        if(!isQuestionActive) startRunAnim();
+
     }, 250); // Shorter landing time
 }
 
@@ -185,6 +218,8 @@ let lastObstacleTime = 0;
 let gameOver = false;
 let obstacleInterval;
 
+const totalObstacle = 65;
+
 function createObstacle() {
     if (gameOver || isQuestionActive || isPaused) return;
     
@@ -193,28 +228,35 @@ function createObstacle() {
     
     // Check if there's an obstacle too close to the right edge
     const lastObstacle = obstacles[obstacles.length - 1];
-    if (lastObstacle && window.innerWidth - lastObstacle.position < 300) {
+    if (lastObstacle && window.innerWidth - lastObstacle.position < 500) {
         // Don't create a new obstacle if the last one is too close to the edge
         setTimeout(createObstacle, 500);
         return;
     }
     
-    // Random stone
-    const randomStoneNumber = Math.floor(Math.random() * 160) + 1;
-    const stoneImgSrc = `./assets/stones/stone (${randomStoneNumber}).png`;
-    
+    // Random obstacle
+    const randomObstacleIndex = Math.floor(Math.random() * totalObstacle) + 1;
+
+    // handle fire gif
+    let obstacleImgSrc;
+    if(randomObstacleIndex != 66)
+        obstacleImgSrc = `./assets/obstacle/obstacle (${randomObstacleIndex}).png`;
+    else obstacleImgSrc = `./assets/obstacle/obstacle (${randomObstacleIndex}).gif`;
+
     // Create obstacle
     const obstacle = document.createElement('div');
     obstacle.className = 'obstacle';
     // random width
-    obstacle.style.width = Math.floor(Math.random() * (120 - 70 + 1)) + 70 + 'px';
+    obstacle.style.width = Math.floor(Math.random() * (140 - 90 + 1)) + 70 + 'px';
     
     // Create image 
     const img = document.createElement('img');
-    img.src = stoneImgSrc;
+    img.src = obstacleImgSrc;
     
     obstacle.appendChild(img);
     document.body.appendChild(obstacle);
+
+    adjustObstaclePos(obstacle);
     
     const obstacleRect = obstacle.getBoundingClientRect();
     obstacles.push({
@@ -401,6 +443,12 @@ function restartGame(e) {
         score = 0;
         updateScore();
         
+        // Reset game speed
+        obstacleSpeed = 10; 
+        roadSpeed = 120; 
+        minObstacleInterval = 1800;
+        maxObstacleInterval = 3500;
+
         // Reset
         gameStartTime = Date.now();
         correctAns = 0;
@@ -454,7 +502,7 @@ function startGameLoops() {
 
 // #region QUESTIONS
 
-const totalQuestion = 100;
+const totalQuestion = 50;
 
 let questionTimer;
 let currentQuestion;
@@ -470,6 +518,9 @@ function showQuestion() {
     
     // Pause game
     clearInterval(obstacleInterval);
+    clearInterval(roadLoop);
+    clearInterval(runAnimInterval);
+    player.querySelector('img').src = `./assets/player_idle.png`;
     
     // Get a question
     currentQuestion = getNextQuestion();
@@ -566,7 +617,9 @@ function hideQuestion() {
     
     // Resume game
     isQuestionActive = false;
-    obstacleInterval = setInterval(updateObstacles, 16);
+    obstacleInterval = setInterval(updateObstacles, obstacleSpeed);
+    roadLoop = setInterval(updateRoad, roadSpeed);
+    startRunAnim();
     
     setTimeout(createObstacle, 1000);
 }

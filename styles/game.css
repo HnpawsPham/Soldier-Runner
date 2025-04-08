@@ -1,5 +1,6 @@
-body{
+body {
     overflow: hidden;
+    font-size: 15px;
 }
 
 #title {
@@ -15,7 +16,7 @@ body{
     animation: fadeIn 1.5s ease-in-out; 
 }
 
-#noti{
+#noti {
     margin-top: -80vh !important;
 }
 
@@ -52,33 +53,15 @@ body{
     animation: glow 3s infinite;
 }
 
-@media (max-width: 768px) {
-    #title h2 {
-        font-size: 1.3rem; 
-    }
-    
-    #title h1 {
-        font-size: 2.2rem;  
-    }
-    
-    #title p {
-        font-size: 1rem; 
-    }
-    
-    #title i {
-        font-size: 0.9rem; 
-    }
-}
-
-#player{
+#player {
     z-index: 10;
     position: fixed;
-    width: 500px;
-    bottom: 10%; 
+    width: 35vw; 
+    max-width: 700px; 
     left: 10%; 
 }
 
-#player img{
+#player img {
     width: 100%;
     height: auto;
     object-fit: contain;
@@ -87,7 +70,7 @@ body{
 #score-text{
     z-index: 11;
     position: fixed;
-    margin: -80vh 0 0 85vw;
+    margin: -21vh 0 0 85vw;
     color: white;
     font-size: 20px;
     font-weight: bold;
@@ -98,9 +81,10 @@ body{
 }
 
 #main-bg {
-    margin-top: -82vh;
+    z-index: -1;
+    top: 0;
     width: 100vw;
-    height: 82vh;
+    height: 90vh;
     position: fixed;
 }
 
@@ -111,22 +95,21 @@ body{
 }
 
 #road {
-    position: relative;
-    display: flex;
+    position: fixed;
     width: 100vw;
-    margin-top: 82vh;
+    height: 100vh;
+    display: flex;
+    align-items: end;
+
 }
 
 #road img {
     position: absolute;
-    margin-left: -10px;
 }
 
 .obstacle {
     z-index: 9;
     position: fixed;
-    position: fixed;
-    bottom: 6%;
     left: 100%;
     height: auto;
 }
@@ -158,13 +141,13 @@ body{
 .quiz-header {
     position: relative;
     margin-bottom: 30px;
-    padding-bottom: 20px;
+    padding-bottom: 2vh;
     border-bottom: 1px solid #eaeaea;
 }
 
 .quiz-header h2 {
     color: #333;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 600;
     line-height: 1.4;
 }
@@ -184,8 +167,8 @@ body{
 .options-container {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 15px;
-    margin-bottom: 30px;
+    gap: 2vh;
+    margin-bottom: 2vh;
 }
 
 .option {
@@ -194,7 +177,7 @@ body{
     background-color: #f8f9fa;
     border: 2px solid #e9ecef;
     border-radius: 10px;
-    padding: 15px;
+    padding: 2vh;
     cursor: pointer;
     transition: all 0.2s ease;
 }
@@ -300,66 +283,47 @@ body{
     transform: translateY(0);
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-    .quiz-container {
-        padding: 20px;
-    }
-    
-    .quiz-header h2 {
-        font-size: 1.3rem;
-    }
-    
-    .option {
-        padding: 12px;
-    }
-    
-    .option-letter {
-        width: 30px;
-        height: 30px;
-        font-size: 0.9rem;
-    }
-    
-    .option-text {
-        font-size: 0.9rem;
-    }
-    
-    .btn {
-        padding: 8px 20px;
-        font-size: 0.9rem;
-    }
+.pause-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
 }
 
-/* Animfor options */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.pause-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
-.option {
-    animation: fadeIn 0.3s ease forwards;
+.pause-content h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
 }
 
-.option:nth-child(1) {
-    animation-delay: 0.1s;
+.pause-btn {
+    padding: 12px 25px;
+    font-size: 1.2em;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #5cb85c;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.option:nth-child(2) {
-    animation-delay: 0.2s;
-}
-
-.option:nth-child(3) {
-    animation-delay: 0.3s;
-}
-
-.option:nth-child(4) {
-    animation-delay: 0.4s;
+.pause-btn:hover {
+    background-color: #4cae4c;
 }
 
 .summary-container {
@@ -474,45 +438,208 @@ body{
     }
 }
 
-.pause-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
+@media (max-width: 1200px) {
+    #title h1 {
+        font-size: 2.2rem;
+    }
+
+    #title h2 {
+        font-size: 1.3rem;
+    }
+
+    #title p {
+        font-size: 1rem;
+    }
+
+    #title i {
+        font-size: 0.85rem;
+    }
+
+    #score-text {
+        margin: -18vh 0 0 80vw;
+        font-size: 18px;
+    }
 }
 
-.pause-content {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+@media (max-width: 992px) {
+    #title h1 {
+        font-size: 2rem;
+    }
+
+    #title h2 {
+        font-size: 1.2rem;
+    }
+
+    #title p {
+        font-size: 0.9rem;
+    }
+
+    #title i {
+        font-size: 0.8rem;
+    }
+
+    #score-text {
+        margin: -15vh 0 0 75vw;
+        font-size: 16px;
+    }
 }
 
-.pause-content h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: #333;
+@media (max-width: 768px) {
+    #title {
+        top: 3vh;
+    }
+
+    #title h1 {
+        font-size: 1.8rem;
+    }
+
+    #title h2 {
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+    }
+
+    #title p {
+        font-size: 0.8rem;
+        margin: 10px 0;
+    }
+
+    #title i {
+        font-size: 0.75rem;
+    }
+
+    #score-text {
+        margin: -12vh 0 0 70vw;
+        font-size: 14px;
+    }
 }
 
-.pause-btn {
-    padding: 12px 25px;
-    font-size: 1.2em;
-    margin: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #5cb85c;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+@media (max-width: 576px) {
+    #title {
+        top: 2vh;
+    }
+
+    #title h1 {
+        font-size: 1.5rem;
+    }
+
+    #title h2 {
+        font-size: 1rem;
+        letter-spacing: 0.5px;
+    }
+
+    #title p {
+        font-size: 0.7rem;
+        margin: 8px 0;
+    }
+
+    #title i {
+        font-size: 0.7rem;
+    }
+
+    #score-text {
+        margin: -10vh 0 0 65vw;
+        font-size: 12px;
+    }
 }
 
-.pause-btn:hover {
-    background-color: #4cae4c;
+@media (max-width: 400px) {
+    #title h1 {
+        font-size: 1.3rem;
+    }
+
+    #title h2 {
+        font-size: 0.9rem;
+    }
+
+    #title p {
+        font-size: 0.65rem;
+    }
+
+    #title i {
+        font-size: 0.65rem;
+    }
+
+    #score-text {
+        margin: -8vh 0 0 60vw;
+        font-size: 10px;
+    }
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+    #title {
+        top: 2vh;
+    }
+
+    #title h1 {
+        font-size: 1.3rem;
+        margin-bottom: 5px;
+    }
+
+    #title h2 {
+        font-size: 0.9rem;
+        margin-bottom: 5px;
+    }
+
+    #title p {
+        font-size: 0.7rem;
+        margin: 5px 0;
+    }
+
+    #title i {
+        margin-top: 5px;
+        font-size: 0.7rem;
+    }
+
+    #score-text {
+        margin: -10vh 0 0 80vw;
+        font-size: 12px;
+    }
+}
+
+@media (max-height: 400px) {
+    #title {
+        top: 1vh;
+    }
+
+    #title h1 {
+        font-size: 1.1rem;
+    }
+
+    #title h2 {
+        font-size: 0.8rem;
+    }
+
+    #title p {
+        display: none;
+    }
+
+    #score-text {
+        margin: -6vh 0 0 55vw;
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 1000px) {
+    #board {
+        width: 90vw; 
+        max-width: 350px; 
+        padding: 5%; 
+    }
+
+    .quiz-header h2 {
+        font-size: 5vw; 
+    }
+
+    .options-container {
+        gap: 5%; 
+    }
+
+    .option {
+        padding: 8%; 
+        font-size: 4vw; 
+    }
+
+    .timer, .btn {
+        font-size: 4vw; 
+    }
 }
