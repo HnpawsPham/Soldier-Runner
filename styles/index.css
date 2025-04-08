@@ -1,27 +1,16 @@
-*{
-    padding: 0;
-    margin: 0;
-}
-
-@font-face {
-    font-family: main;
-    src: url(../fonts/partiot.otf);
-}
-
 body{
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 :root{
-    --blue: rgba(0, 153, 255, 0.727);
+    --blue: rgb(0, 153, 255);
 }
 
 #title {
     font-family: main;
     z-index: 10;
-    position: fixed;
-    top: 5vh;
-    left: 0;
+    top: 15vh;
     width: 100vw;
     text-align: center;
     color: white;
@@ -58,29 +47,6 @@ body{
     color: #ffcc00; 
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes glow {
-    0% {
-        text-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
-    }
-    50% {
-        text-shadow: 0 0 20px rgba(255, 204, 0, 0.8), 0 0 30px rgba(255, 204, 0, 0.5);
-    }
-    100% {
-        text-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
-    }
-}
-
 #title h1 {
     animation: glow 3s infinite;
 }
@@ -102,13 +68,13 @@ body{
         font-size: 1rem;
     }
 }
-#start-btn{
+#start-btn {
     cursor: pointer;
     z-index: 2;
-    position: fixed;
+    position: relative;
     border-radius: 5px;
     border: none;
-    margin: 85vh 0 0 35vw;
+    margin: 20px 35vw; 
     background-color: var(--blue);
     box-shadow: 0 0 5px rgba(0, 153, 255, 0.3);
     color: white;
@@ -118,6 +84,7 @@ body{
 }
 
 #main-bg{
+    z-index: -1;
     position: fixed;
     width: 100vw;
     height: 100vh;
@@ -130,12 +97,8 @@ body{
 }
 
 #form {
-    position: fixed;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
     width: 350px;
+    margin-left: calc((100vw - 350px)/2);
 }
 
 .form-container {
@@ -193,4 +156,72 @@ body{
 
 .submit-btn:hover {
     background-color: rgba(0, 123, 205, 0.8);
+}
+#leaderboard {
+    margin: 20px 20vw; 
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    width: 60vw;
+    z-index: 10;
+}
+
+#leaderboard h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+#leaderboard table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#leaderboard th, #leaderboard td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+#leaderboard th {
+    background-color: var(--blue);
+    color: white;
+}
+
+#leaderboard tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#leaderboard tr:hover {
+    background-color: rgba(0, 153, 255, 0.3);
+}
+
+#rules-box {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    width: 60vw;
+    margin: 20px 20vw;
+    z-index: 10;
+}
+
+#rules-box h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 1.8rem;
+}
+
+#rules-box ol {
+    margin: 0; 
+    padding-left: 20px; 
+}
+
+#rules-box li {
+    margin: 10px 0; 
+    color: #555;
+    font-size: 1rem; 
+    line-height: 1.5; 
 }

@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    caret-color: transparent;
+}
+
+@font-face {
+    font-family: main;
+    src: url(../fonts/partiot.otf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif; 
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(255, 204, 0, 0.8), 0 0 30px rgba(255, 204, 0, 0.5);
+    }
+    100% {
+        text-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
+    }
+}
+
+#noti {
+    z-index: 1000;
+    position: fixed;
+    width: 80vw;
+    height: 5vw;
+    margin: 5vh 0 0 10vw;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(0 0 30px black);
+}

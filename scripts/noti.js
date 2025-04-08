@@ -1,5 +1,5 @@
 const noti = document.getElementById("noti");
-noti.classList.add("hidden");noti.style.display = "none";
+noti.style.display = "none";
 
 export function visibleNoti(content, milisec){
     noti.style.display = "flex";

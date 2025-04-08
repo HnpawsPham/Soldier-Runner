@@ -1,6 +1,19 @@
+import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js";
 import { visibleNoti } from "./noti.js";
 import { loadQuestions, getNextQuestion, questions } from "./question.js";
 import { restartWithNewTrack, playLoseSound, playWinSound, stopAllSounds, initAudio } from "./audio.js";
+import { saveGameRes, app } from "./firebase.js";
+
+const auth = getAuth(app);
+
+// Listen for authentication state changes
+onAuthStateChanged(auth, (user) => {
+    if (user) {
+        console.log("User is logged in:", user.uid);
+    } else {
+        console.log("No user is logged in.");
+    }
+});
 
 // hide question board
 document.getElementById("board").style.display = "none";
@@ -139,17 +152,6 @@ document.addEventListener('keydown', (e) => {
 
     if (e.code === 'Escape') 
         togglePause();
-    
-    // Add debug mode toggle
-    if (e.code === 'KeyD') {
-        window.debugMode = !window.debugMode;
-        if (window.debugMode) {
-            visibleNoti("Hiển thị hitbox", 2000);
-        } else {
-            visibleNoti("ẨN hitbox", 1000);
-            document.querySelectorAll('.hitbox-debug').forEach(el => el.remove());
-        }
-    }
 });
 
 // #endregion
@@ -323,42 +325,6 @@ function checkCollision(obstacle) {
         playerTop > obstacleBottom
     );
 }
-
-function drawHitboxes() {
-    document.querySelectorAll('.hitbox-debug').forEach(el => el.remove());
-
-    const playerRect = player.getBoundingClientRect();
-    const offsets = isJumping ? HITBOX_OFFSETS.player.jumping : HITBOX_OFFSETS.player.running;
-    
-    // player hitbox
-    const playerHitbox = document.createElement('div');
-    playerHitbox.className = 'hitbox-debug';
-    playerHitbox.style.position = 'absolute';
-    playerHitbox.style.left = (playerRect.left + offsets.left) + 'px';
-    playerHitbox.style.top = (playerRect.top + offsets.top) + 'px';
-    playerHitbox.style.width = (playerRect.width - offsets.left - offsets.right) + 'px';
-    playerHitbox.style.height = (playerRect.height - offsets.top - offsets.bottom) + 'px';
-    playerHitbox.style.border = '2px solid red';
-    playerHitbox.style.zIndex = '9999';
-    playerHitbox.style.pointerEvents = 'none';
-    document.body.appendChild(playerHitbox);
-    
-    // obstacle hitbox
-    obstacles.forEach(obstacle => {
-        const obstacleRect = obstacle.element.getBoundingClientRect();
-        const obstacleHitbox = document.createElement('div');
-        obstacleHitbox.className = 'hitbox-debug';
-        obstacleHitbox.style.position = 'absolute';
-        obstacleHitbox.style.left = (obstacleRect.left + HITBOX_OFFSETS.obstacle.left) + 'px';
-        obstacleHitbox.style.top = (obstacleRect.top + HITBOX_OFFSETS.obstacle.top) + 'px';
-        obstacleHitbox.style.width = (obstacleRect.width - HITBOX_OFFSETS.obstacle.left - HITBOX_OFFSETS.obstacle.right) + 'px';
-        obstacleHitbox.style.height = (obstacleRect.height - HITBOX_OFFSETS.obstacle.top - HITBOX_OFFSETS.obstacle.bottom) + 'px';
-        obstacleHitbox.style.border = '2px solid blue';
-        obstacleHitbox.style.zIndex = '9999';
-        obstacleHitbox.style.pointerEvents = 'none';
-        document.body.appendChild(obstacleHitbox);
-    });
-}
 //#endregion
 
 //#region HANDLE GAME WIN & OVER
@@ -375,8 +341,54 @@ function handleGameOver() {
         hideQuestion();
     
     
-    visibleNoti("Bạn đã thua! Nhấn Enter để chơi lại.", 3000);
+    visibleNoti("Bạn đã thua! Nhấn Enter để chơi lại.", 10000);
     document.addEventListener('keydown', restartGame);
+}
+
+function checkWin() {
+    if (questionCounter >= totalQuestion) 
+        handleWin();
+}
+
+function handleWin() {
+    gameOver = true;
+    clearInterval(runAnimInterval);
+    clearInterval(obstacleInterval);
+    clearInterval(roadLoop);
+    
+    playWinSound();
+    
+    const gameTime = Math.floor((Date.now() - gameStartTime) / 1000);
+    const minutes = Math.floor(gameTime / 60);
+    const seconds = gameTime % 60;
+    const formattedTime = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    
+    document.getElementById('final-score').textContent = score;
+    document.getElementById('total-time').textContent = formattedTime;
+    document.getElementById('correct-answers').textContent = `${correctAns}/${totalQuestion}`;
+    
+    // Check if user is authenticated
+    const auth = getAuth(app);
+    const uid = auth.currentUser ? auth.currentUser.uid : null;
+
+    if (uid) saveGameRes(score, formattedTime, correctAns);
+    
+    else  visibleNoti("Bạn cần đăng nhập để lưu kết quả!", 3000); 
+    
+
+    const summaryContainer = document.getElementById('win-summary');
+    summaryContainer.classList.add('active');
+    
+    // Restart game
+    document.getElementById('restart-btn').onclick = function() {
+        summaryContainer.classList.remove('active');
+        restartGame({ type: 'click' });
+    };
+    
+    // Return to homepage
+    document.getElementById('home-btn').onclick = function() {
+        window.location.href = "./index.html";
+    };
 }
 
 function restartGame(e) {
@@ -442,7 +454,7 @@ function startGameLoops() {
 
 // #region QUESTIONS
 
-const totalQuestion = 10;
+const totalQuestion = 2;
 
 let questionTimer;
 let currentQuestion;
@@ -541,43 +553,6 @@ function handleTimeUp() {
     setTimeout(hideQuestion, 2000);
 
     nextButton.style.display = 'none';
-}
-
-function checkWin() {
-    if (questionCounter >= totalQuestion) 
-        handleWin();
-}
-
-function handleWin() {
-    gameOver = true;
-    clearInterval(runAnimInterval);
-    clearInterval(obstacleInterval);
-    clearInterval(roadLoop);
-    
-    playWinSound();
-    
-    const gameTime = Math.floor((Date.now() - gameStartTime) / 1000);
-    const minutes = Math.floor(gameTime / 60);
-    const seconds = gameTime % 60;
-    const formattedTime = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-    
-    document.getElementById('final-score').textContent = score;
-    document.getElementById('total-time').textContent = formattedTime;
-    document.getElementById('correct-answers').textContent = `${correctAns}/${totalQuestion}`;
-    
-    const summaryContainer = document.getElementById('win-summary');
-    summaryContainer.classList.add('active');
-    
-    // restart game
-    document.getElementById('restart-btn').onclick = function() {
-        summaryContainer.classList.remove('active');
-        restartGame({ type: 'click' });
-    };
-    
-    // return homepage
-    document.getElementById('home-btn').onclick = function() {
-        window.location.href = "./index.html";
-    };
 }
 
 function hideQuestion() {
@@ -696,6 +671,6 @@ window.addEventListener('load', async () => {
     
     startGameLoops();
     restartWithNewTrack(); 
-    visibleNoti("Bấm phím CÁCH để nhảy! Bấm phím D để hiện hitbox", 3000);
+    visibleNoti("Bấm phím CÁCH để nhảy!", 3000);
 });
 //#endregion

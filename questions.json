@@ -1,114 +1,1039 @@
 {
-    "questions": [
-      {
-        "id": 1,
-        "question": "Trong JavaScript, phương thức nào được sử dụng để thêm một phần tử vào cuối mảng?",
-        "options": [
-          "push()",
-          "append()",
-          "addToEnd()",
-          "insert()"
-        ],
-        "correctAnswer": 0
-      },
-      {
-        "id": 2,
-        "question": "Đâu là ngôn ngữ lập trình được sử dụng để tạo kiểu cho trang web?",
-        "options": [
-          "HTML",
-          "JavaScript",
-          "CSS",
-          "Python"
-        ],
-        "correctAnswer": 2
-      },
-      {
-        "id": 3,
-        "question": "Phương thức nào được sử dụng để chọn một phần tử HTML bằng ID trong JavaScript?",
-        "options": [
-          "querySelector()",
-          "getElementById()",
-          "selectElement()",
-          "findById()"
-        ],
-        "correctAnswer": 1
-      },
-      {
-        "id": 4,
-        "question": "Thuộc tính nào được sử dụng để thay đổi màu chữ trong CSS?",
-        "options": [
-          "text-color",
-          "font-color",
-          "color",
-          "text-style"
-        ],
-        "correctAnswer": 2
-      },
-      {
-        "id": 5,
-        "question": "Đâu là cú pháp đúng để tạo một vòng lặp for trong JavaScript?",
-        "options": [
-          "for (i = 0; i < 5; i++)",
-          "for (i < 5; i++)",
-          "for i = 1 to 5",
-          "loop (i = 0; i < 5)"
-        ],
-        "correctAnswer": 0
-      },
-      {
-        "id": 6,
-        "question": "Phương thức nào được sử dụng để làm tròn một số đến số nguyên gần nhất trong JavaScript?",
-        "options": [
-          "Math.round()",
-          "Math.floor()",
-          "Math.ceil()",
-          "Math.random()"
-        ],
-        "correctAnswer": 0
-      },
-      {
-        "id": 7,
-        "question": "Đâu là cách đúng để khai báo một biến trong JavaScript?",
-        "options": [
-          "variable x;",
-          "var x;",
-          "x = var;",
-          "declare x;"
-        ],
-        "correctAnswer": 1
-      },
-      {
-        "id": 8,
-        "question": "Thuộc tính nào được sử dụng để thay đổi kích thước font chữ trong CSS?",
-        "options": [
-          "text-size",
-          "font-style",
-          "text-style",
-          "font-size"
-        ],
-        "correctAnswer": 3
-      },
-      {
-        "id": 9,
-        "question": "Phương thức nào được sử dụng để xóa phần tử cuối cùng của mảng trong JavaScript?",
-        "options": [
-          "pop()",
-          "remove()",
-          "delete()",
-          "splice()"
-        ],
-        "correctAnswer": 0
-      },
-      {
-        "id": 10,
-        "question": "Đâu là cách đúng để viết một câu lệnh if trong JavaScript?",
-        "options": [
-          "if x = 5 then",
-          "if (x == 5)",
-          "if x == 5",
-          "if x = 5"
-        ],
-        "correctAnswer": 1
-      }
-    ]
-  }
+  "questions": [
+    {
+      "id": 1,
+      "question": "Tên của chiến dịch mở màn cuộc Tổng tiến công và nổi dậy mùa Xuân 1975?",
+      "options": [
+        "Chiến dịch Tây Nguyên",
+        "Chiến dịch Đường 9 - Nam Lào",
+        "Chiến dịch Trị Thiên - Huế",
+        "Chiến dịch Xuân Lộc"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 2,
+      "question": "Ai là Tư lệnh Bộ Tư lệnh Chiến dịch Hồ Chí Minh?",
+      "options": [
+        "Đồng chí Lê Trọng Tấn",
+        "Đồng chí Văn Tiến Dũng",
+        "Đồng chí Lê Đức Anh",
+        "Đồng chí Phạm Văn Trà"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 3,
+      "question": "Tên chính thức của Hiệp định Paris 1973 là gì?",
+      "options": [
+        "Hiệp định Ngừng bắn và thiết lập hòa bình tại Việt Nam",
+        "Hiệp định Hòa bình Pari",
+        "Hiệp định Hòa bình Đông Dương",
+        "Hiệp định về Chấm dứt chiến tranh, lập lại hòa bình ở Việt Nam"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 4,
+      "question": "Chiến sĩ Quân đội nhân dân Việt Nam đầu tiên cắm lá cờ chiến thắng của Mặt trận Dân tộc giải phóng miền Nam Việt Nam trên nóc Dinh Độc Lập trưa ngày 30 tháng 4 năm 1975, là ai?",
+      "options": [
+        "Nguyễn Văn Kỳ",
+        "Thái Bá Minh",
+        "Lữ Văn Hòa",
+        "Bùi Quang Thận"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "id": 5,
+      "question": "Ai là người ký bức Điện mệnh lệnh 'Thần tốc, thần tốc hơn nữa, táo bạo, táo bạo hơn nữa…' ngày 7/4/1975?",
+      "options": [
+        "Đồng chí Phạm Văn Đồng",
+        "Đồng chí Văn Tiến Dũng",
+        "Đồng chí Lê Duẩn",
+        "Đồng chí Võ Nguyên Giáp"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "id": 6,
+      "question": "Để bình định miền Nam trong 'Chiến tranh đặc biệt', Mỹ và ngụy quyền Sài Gòn thực hiện chương trình gì?",
+      "options": [
+        "Lập 'Ấp chiến lược', 'Ấp đời mới'",
+        "Lập 'Ấp chiến lược', 'Ấp tân sinh'",
+        "Lập 'Khu dinh điền', 'Khu trù mật'",
+        "Lập 'Làng tề', 'Làng mới'"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 7,
+      "question": "Chiến dịch giải phóng Sài Gòn - Gia Định chính thức đổi tên là Chiến dịch Hồ Chí Minh vào thời gian nào?",
+      "options": [
+        "Ngày 14 tháng 4 năm 1975",
+        "Ngày 1 tháng 4 năm 1975",
+        "Ngày 26 tháng 3 năm 1975",
+        "Ngày 25 tháng 3 năm 1975"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 8,
+      "question": "Vị Tổng thống cuối cùng của chính quyền ngụy Sài Gòn đã đầu hàng vô điều kiện khi quân ta tiến vào Dinh Độc Lập?",
+      "options": [
+        "Dương Văn Minh",
+        "Nguyễn Văn Thiệu",
+        "Trần Văn Hương",
+        "Ngô Đình Diệm"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 9,
+      "question": "Chiến dịch phản công Đường 9 - Nam Lào năm 1971 đánh bại cuộc hành quân nào của Mỹ-ngụy?",
+      "options": ["Lam Sơn 719", "Junction City", "Ánh sáng sao", "Toàn thắng"],
+      "correctAnswer": 0
+    },
+    {
+      "id": 10,
+      "question": "Phong trào thi đua yêu nước tiêu biểu ở miền Bắc trong kháng chiến chống Mỹ gồm?",
+      "options": [
+        "Ba quyết tâm, Ba sẵn sàng, Ba đảm đang",
+        "Ba bám, Ba sẵn sàng, Ba đảm đang",
+        "Ba mũi giáp công, Ba quyết tâm, Ba sẵn sàng",
+        "Ba đảm đảng, Ba quyết tâm, Ba bám"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 11,
+      "question": "Ghi nhận những công lao của Thành phố Hồ Chí Minh trong sự nghiệp xây dựng, bảo vệ đất nước, năm 2005, Đảng và Nhà nước đã tặng thưởng cho Thành phố Hồ Chí Minh danh hiệu nào?",
+      "options": [
+        "Thành phố sáng tạo",
+        "Thành phố hội nhập",
+        "Anh hùng Lực lượng vũ trang nhân dân",
+        "Thành phố Anh hùng"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "id": 12,
+      "question": "Theo Hiệp định Giơnevơ năm 1954, đâu là giới tuyến quân sự tạm thời phân chia 2 miền Nam - Bắc Việt Nam trong thời gian chờ cuộc tổng tuyển cử thống nhất đất nước?",
+      "options": ["Vĩ tuyến 15", "Vĩ tuyến 16", "Vĩ tuyến 18", "Vĩ tuyến 17"],
+      "correctAnswer": 3
+    },
+    {
+      "id": 13,
+      "question": "Trong hai ngày 18-19/8/1965, đã diễn ra trận đọ sức quyết liệt đầu tiên giữa lực lượng chủ lực Quân giải phóng miền Nam Việt Nam với quân viễn chinh Mỹ, chỉ ra khả năng ta có thể đánh thắng Mỹ trong chiến lược 'Chiến tranh cục bộ'. Đó là trận đánh nào?",
+      "options": [
+        "Trận Ấp Bắc",
+        "Trận Đồng Xoài",
+        "Trận Vạn Tường",
+        "Trận Núi Thành"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 14,
+      "question": "Từ lúc quân ta được lệnh nổ súng mở đầu cho chiến dịch Hồ Chí Minh đến khi giải phong Sài Gòn – Gia Định là bao nhiêu ngày?",
+      "options": ["5 ngày", "22 ngày", "10 ngày", "15 ngày"],
+      "correctAnswer": 1
+    },
+    {
+      "id": 15,
+      "question": "Tinh thần 'Đi nhanh đến, đánh nhanh thắng' và khí thế 'thần tốc, táo bạo, bất ngờ, chắc thắng'. Đó là tinh thần và khí thế ra quân của dân tộc ta trong?",
+      "options": [
+        "Chiến dịch Tây Nguyên",
+        "Chiến dịch Huế-Đà Nẵng",
+        "Chiến dịch Hồ Chí Minh lịch sử",
+        "Tất cả các chiến dịch trên"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "id": 16,
+      "question": "Sau khi thất thủ ở Tây Nguyên, Huế, Đà Nẵng, địch phải lui về phòng thủ ở đâu?",
+      "options": ["Cam Ranh", "Nha Trang", "Phan Rang", "Xuân Lộc"],
+      "correctAnswer": 3
+    },
+    {
+      "id": 17,
+      "question": "Ý nghĩa lớn nhất của chiến dịch Tây Nguyên là:",
+      "options": [
+        "Là nguồn cổ vũ mạnh mẽ để quân dân ta tiến lên giải phóng hoàn toàn miền Nam",
+        "Làm cho tinh thần địch hốt hoảng, mất khả năng chiến đấu",
+        "Chuyển cuộc kháng chiến chống Mỹ cứu nước sang giai đoạn mới: Từ tiến công chiến lược chuyển phát triển thành tổng tiến công chiến lược trên toàn miền Nam",
+        "Đó là thắng lợi lớn nhất, oanh liệt nhất trong cuộc kháng chiến chống Mỹ cứu nước của nhân dân ta"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "id": 18,
+      "question": "“Thời cơ chiến lược đã đến, ta có điều kiện hoàn thành quyết tâm giải phóng miền Nam…..Đó là nghị quyết nào của Đảng ta?",
+      "options": [
+        "Hội nghị lần thứ 21 của Trung ương Đảng vào tháng 7-1973",
+        "Hội nghị Bộ Chính trị họp từ 30-9 đến 7-10-1974",
+        "Hội nghị Bộ chính trị mở rộng họp từ 18-12-1974 đến 8-1-1975",
+        "Nghị quyết của Bộ Chính trị ngày 25-3-1975"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "id": 19,
+      "question": "Bạn hãy cho biết chiếc xe tăng dẫn đầu đánh chiếm Dinh độc lập mang số bao nhiêu?",
+      "options": ["390", "429", "205", "309"],
+      "correctAnswer": 1
+    },
+    {
+      "id": 20,
+      "question": "Lúc 10h45p, ngày 30/4/1975, diễn ra sự kiện cơ bản nào ở Sài Gòn?",
+      "options": [
+        "Dương Văn Minh đầu hàng",
+        "Xe tăng tiến vào Dinh Độc Lập",
+        "Chiến dịch Hồ Chí Minh toàn thắng",
+        "Cắm cờ trên nóc Dinh Độc Lập"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 21,
+      "question": "Chiến dịch giải phóng Sài Gòn – Gia Định chính thức đổi tên là Chiến dịch Hồ Chí Minh vào thời gian nào?",
+      "options": ["26/3/1975", "29/3/1975", "14/4/1975", "30/4/1975"],
+      "correctAnswer": 0
+    },
+    {
+      "id": 22,
+      "question": "Vị tổng thống cuối cùng của chính quyền Mĩ – Ngụy, đã đầu hàng vô điều kiện khi quân ta tiến vào Dinh Độc Lập?",
+      "options": [
+        "Ngô Đình Diệm",
+        "Nguyễn Văn Thiệu",
+        "Dương Văn Minh",
+        "Trần Văn Hương"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "id": 23,
+      "question": "Bạn hãy cho biết trong trận “Điện Biên Phủ trên không” – đòn quyết định đập tan “Uy thế không lực Hoa Kỳ” trên bầu trời Hà Nội, quân và dân ta đã tiêu diệt bao nhiêu chiếc máy bay của địch?",
+      "options": ["85 chiếc", "83 chiếc", "82 chiếc", "81 chiếc"],
+      "correctAnswer": 1
+    },
+    {
+      "id": 24,
+      "question": "Có một thành phố được giải phóng vào ngày 26/3/1975 trùng với ngày thành lập Đoàn TNCS Hồ Chí Minh. Bạn hãy cho biết đó là thành phố nào?",
+      "options": ["Đà Nẵng", "Huế", "Đắk Lắk", "Buôn Mê Thuột"],
+      "correctAnswer": 0
+    },
+    {
+      "id": 25,
+      "question": "Tỉnh cuối cùng của miền Nam được giải phóng trong cuộc Tổng tiến công Xuân 1975 là tỉnh nào?",
+      "options": ["Châu Đốc", "Cà Mau", "Kiên Giang", "Long An"],
+      "correctAnswer": 1
+    },
+    {
+      "id": 26,
+      "question": "Địa danh nào được mang tên 'Cánh Cửa Thép' cuối cùng bảo vệ Sài Gòn từ hướng Đông của Việt Nam Cộng hòa?",
+      "options": ["Trảng Bom", "Biên Hòa", "Xuân Lộc", "Long Khánh"],
+      "correctAnswer": 2
+    },
+    {
+      "id": 27,
+      "question": "Viên phi công của quân đội Sài Gòn phản chiến thực hiện vụ ném bom dinh Độc Lập ngày 8 – 4 – 1975 tên là gì?",
+      "options": [
+        "Nguyễn Thành Trung",
+        "Nguyễn Văn Nghĩa",
+        "Nguyễn Văn Bảy",
+        "Nguyễn Nhật Chiêu"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 28,
+      "question": "Trong cuộc chiến tranh xâm lược Việt Nam, đế quốc Mỹ đã trải qua mấy đời tổng thống?",
+      "options": ["5 đời", "4 đời", "3 đời", "2 đời"],
+      "correctAnswer": 1
+    },
+    {
+      "id": 29,
+      "question": "Bạn hãy cho biết chiến dịch giải phóng Sài Gòn - Gia Định chính thức đổi tên là chiến dịch Hồ Chí Minh khi nào?",
+      "options": ["26/3/1975", "29/3/1975", "14/4/1975", "30/4/1975"],
+      "correctAnswer": 0
+    },
+    {
+      "id": 30,
+      "question": "Để tạo cớ leo thang đánh phá miền Bắc Việt Nam, đầu tháng 8 năm 1964, đế quốc Mỹ đã dựng lên sự kiện nào?",
+      "options": ["Vịnh Hạ Long", "Đảo Cồn Cỏ", "Vịnh Bắc Bộ", "Cầu Hàm Rồng"],
+      "correctAnswer": 2
+    },
+    {
+      "id": 31,
+      "question": "Thắng lợi then chốt mở màn cho chiến dịch Tây Nguyên từ ngày 4/3 đến 24/3/1975 là thắng lợi ở đâu?",
+      "options": [
+        "Pleiku",
+        "Kon Tum",
+        "Buôn Ma Thuột",
+        "Bảo Lộc"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "id": 32,
+      "question": "Sự kiện báo hiệu sự toàn thắng của Chiến dịch Hồ Chí Minh (1975)?",
+      "options": [
+        "Ngày 30/4 xe tăng và bộ binh của ta tiến vào Dinh Độc Lập.",
+        "Ngày 30/4 lá cờ cách mạng tung bay trên nóc Dinh Độc Lập.",
+        "Ngày 28/4 Tổng thống Dương Văn Minh tuyên bố đầu hàng không điều kiện.",
+        "Ngày 26/4 ta tiến vào trung tâm Sài Gòn, đánh chiếm cơ quan đầu não của địch."
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 33,
+      "question": "Điều kiện thuận lợi để cuối năm 1974 - đầu năm 1975 Bộ Chính trị Trung ương Đảng Lao động Việt Nam đề ra chủ trương, kế hoạch giải phóng hoàn toàn miền Nam là:",
+      "options": [
+        "So sánh lực lượng ở miền Nam thay đổi có lợi cho cách mạng.",
+        "Miền Bắc đã hoàn thành cuộc cách mạng xã hội chủ nghĩa.",
+        "Mĩ rút toàn bộ lực lượng ra khỏi lãnh thổ Việt Nam.",
+        "Mĩ không còn viện trợ kinh tế, quân sự cho chính quyền Sài Gòn."
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 34,
+      "question": "Sự kiện nào sau đây có ý nghĩa kết thúc cuộc kháng chiến chống Mỹ của nhân dân Việt Nam?",
+      "options": [
+        "Hiệp định Pari được ký kết năm 1973.",
+        "Cuộc Tổng tiến công và nổi dậy Xuân 1975.",
+        "Chiến dịch Hồ Chí Minh toàn thắng ngày 30/4/1975.",
+        "Miền Nam được hoàn toàn giải phóng ngày 2/5/1975."
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "id": 35,
+      "question": "Ý nghĩa quốc tế của cuộc kháng chiến chống Mỹ cứu nước (1954 – 1975) ở Việt Nam giành thắng lợi là:",
+      "options": [
+        "Chấm dứt ách thống trị của chủ nghĩa đế quốc trên đất nước ta.",
+        "Hoàn thành cuộc cách mạng dân tộc dân chủ nhân dân trong cả nước.",
+        "Mở ra kỷ nguyên đất nước độc lập, thống nhất, đi lên chủ nghĩa xã hội.",
+        "Cổ vũ phong trào đấu tranh giải phóng dân tộc trên thế giới."
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "id": 36,
+      "question": "Thắng lợi nào của Việt Nam đã “đi vào lịch sử thế giới như một chiến công vĩ đại của thế kỷ XX, một sự kiện có tầm quan trọng quốc tế to lớn và có tính thời đại sâu sắc”?",
+      "options": [
+        "Cách mạng tháng Tám năm 1945.",
+        "Chiến dịch Điện Biên Phủ năm 1954.",
+        "Chiến dịch Hồ Chí Minh năm 1975.",
+        "Thắng lợi của cuộc kháng chiến chống Mỹ 1975."
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "id": 37,
+      "question": "Phương châm tác chiến của bộ đội ta trong chiến dịch Hồ Chí Minh 1975 là:",
+      "options": [
+        "Thần tốc, táo bạo, bất ngờ, chắc thắng.",
+        "Đánh chắc, tiến chắc.",
+        "Tích cực, chủ động, cơ động, linh hoạt.",
+        "Đánh điểm diệt viện."
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 38,
+      "question": "Chiến lược “Chiến tranh cục bộ” của Mỹ ra đời sau thất bại của chiến lược:",
+      "options": [
+        "Chiến tranh đặc biệt.",
+        "Chiến tranh đơn phương.",
+        "Việt Nam hóa chiến tranh.",
+        "Đông Dương hóa chiến tranh."
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 39,
+      "question": "Từ năm 1965 đến năm 1968, Mĩ thực hiện chiến lược chiến tranh nào ở miền Nam Việt Nam?",
+      "options": [
+        "Việt Nam hóa chiến tranh.",
+        "Đông Dương hóa chiến tranh.",
+        "Chiến tranh cục bộ.",
+        "Chiến tranh đặc biệt."
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "id": 40,
+      "question": "Chiến thắng nào của quân dân miền Nam chống chiến lược “Chiến tranh cục bộ” của Mỹ có ý nghĩa mở ra cao trào “Tìm Mĩ mà đánh, lùng ngụy mà diệt” trên khắp miền Nam?",
+      "options": [
+        "Chiến thắng Ấp Bắc (1/1963).",
+        "Chiến thắng Vạn Tường (8/1965).",
+        "Chiến thắng mùa khô lần thứ nhất (1965 – 1966).",
+        "Chiến thắng mùa khô lần thứ hai (1966 – 1967)."
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 41,
+      "question": "Thắng lợi nào của quân dân Việt Nam ở miền Nam đã buộc Mĩ phải tuyên bố “phi Mĩ hóa” chiến tranh xâm lược?",
+      "options": [
+        "Cuộc Tiến công chiến lược năm 1972.",
+        "Cuộc Tổng tiến công và nổi dậy Xuân 1968.",
+        "Trận “Điện Biên Phủ trên không” năm 1972.",
+        "Cuộc Tổng tiến công và nổi dậy Xuân 1975."
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 42,
+      "question": "Chiến thắng nào sau đây không phải là thắng lợi quân sự của quân dân miền Nam chống chiến lược “Chiến tranh cục bộ” của Mỹ?",
+      "options": [
+        "Chiến thắng Bình Giã (2/1964).",
+        "Chiến thắng Vạn Tường (8/1965).",
+        "Chiến thắng hai mùa khô (1965 – 1966) và (1966 – 1967).",
+        "Cuộc Tổng tiến công Tết Mậu Thân 1968."
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "id": 43,
+      "question": "Nội dung nào sau đây không phải là ý nghĩa của cuộc Tổng tiến công và nổi dậy Xuân Mậu Thân năm 1968?",
+      "options": [
+        "Mở ra cao trào “Tìm Mĩ mà đánh, lùng ngụy mà diệt” trên khắp miền Nam.",
+        "Buộc Mỹ phải thừa nhận thất bại của “Chiến tranh cục bộ”.",
+        "Buộc Mỹ phải chấp nhận đàm phán với ta ở Pari.",
+        "Làm lung lay ý chí xâm lược của Mỹ."
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "id": 44,
+      "question": "Mỹ tiến hành chiến tranh phá hoại miền Bắc lần thứ nhất không nhằm mục đích nào sau đây?",
+      "options": [
+        "Phá hoại tiềm lực kinh tế, quốc phòng, xây dựng CNXH ở miền Bắc.",
+        "Ngăn chăn sự chi viện từ bên ngoài vào miền Bắc và từ miền Bắc vào miền Nam.",
+        "Uy hiếp tinh thần, làm lung lay ý chí chống Mĩ của nhân dân hai miền.",
+        "Cứu nguy cho chiến lược “Chiến tranh cục bộ” và tạo thế mạnh trên bàn đàm phán."
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "id": 45,
+      "question": "Trong cuộc kháng chiến chống Mỹ cứu nước (1954 – 1975), nhân dân Việt Nam đã căn bản hoàn thành nhiệm vụ “đánh cho Mỹ cút” bằng thắng lợi nào?",
+      "options": [
+        "Cuộc Tiến công chiến lược năm 1972.",
+        "Trận “Điện Biên Phủ trên không” năm 1972.",
+        "Mỹ ký Hiệp định Pari năm 1973.",
+        "Cuộc Tổng tiến công và nổi dậy Xuân năm 1975."
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "id": 46,
+      "question": "Cuộc Tổng tiến công và nổi dậy Mậu Thân năm 1968 đã mở ra bước ngoặt cho cuộc ngoại giao của nhân dân Việt Nam, vì đã:",
+      "options": [
+        "Buộc Mĩ phải ký kết Hiệp định Pari về chấm dứt chiến tranh Việt Nam.",
+        "Làm lung lay ý chí và buộc Mĩ tuyên bố “Mĩ hóa” trở lại chiến tranh.",
+        "Buộc Mỹ thừa nhận sự thất bại của chiến lược “Việt Nam hóa chiến tranh”.",
+        "Buộc Mĩ ngồi vào bàn đàm phán ở Paris bàn về chấm dứt chiến tranh ở Việt Nam."
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "id": 47,
+      "question": "“Đò xuôi Thạch Hãn xin chèo nhẹ, Đáy sông còn đó bạn tôi nằm, Có tuổi hai mươi thành sóng nước, Vỗ đôi bờ mãi mãi ngàn năm” – những câu thơ trên gợi nhớ đến trận chiến lịch sử nào vào mùa hè năm 1972?",
+      "options": [
+        "Trận Khe Sanh",
+        "Trận thành cổ Quảng Trị",
+        "Trận đường 9- Nam Lào",
+        "Cuộc tổng tiến công và nổi dậy xuân Mậu Thân"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 48,
+      "question": "Phong trào Đồng khởi đã đưa cách mạng miền Nam từ:",
+      "options": [
+        "Đấu tranh vũ trang sang đấu tranh chính trị.",
+        "Bãi công sang biểu tình.",
+        "Thế giữ gìn lực lượng sang thế tiến công.",
+        "Đấu tranh chính trị sang đấu tranh ngoại giao."
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "id": 49,
+      "question": "Từ năm 1969 đến năm 1973, ở miền Nam Việt Nam đế quốc Mĩ đã thực hiện chiến lược:",
+      "options": [
+        "Chiến tranh đặc biệt.",
+        "Chiến tranh một phía.",
+        "Việt Nam hoá chiến tranh.",
+        "Chiến tranh cục bộ."
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "id": 50,
+      "question": "Chiến thắng nào mở đầu cho phong trào “Tìm Mỹ mà đánh, lùng nguỵ mà diệt” khắp miền Nam?",
+      "options": [
+        "Ấp Bắc (2-1-1963).",
+        "Vạn Tường (18-8-1965).",
+        "Mùa khô 1965-1966.",
+        "Tổng tiến công và nổi dậy Xuân 1968."
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 51,
+      "question": "Ai là tác giả của bài hát “Như có Bác Hồ trong ngày vui đại thắng”?",
+      "options": [
+        "Nhạc sĩ Phạm Tuyên.",
+        "Nhạc sĩ Trần Long Ẩn.",
+        "Nhạc sĩ Đỗ Nhuận.",
+        "Nhạc sĩ Huy Du."
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 52,
+      "question": "Theo công bố của Chính phủ Mỹ, Mỹ đã chi bao nhiêu tiền cho chiến tranh ở Việt Nam?",
+      "options": [
+        "676 tỷ USD.",
+        "925 tỷ USD.",
+        "520 tỷ USD.",
+        "352 tỷ USD."
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 53,
+      "question": "“Nếu thời cơ đến vào đầu hoặc cuối năm 1975, thì lập tức giải phóng miền Nam trong năm 1975” được nêu ra trong Hội nghị nào?",
+      "options": [
+        "Hội nghị Bộ Chính trị, Ban Chấp hành Trung ương tháng 10/1974.",
+        "Hội nghị Bộ Chính trị mở rộng từ 18/12/1974 đến 08/01/1975.",
+        "Hội nghị lần thứ 21 Ban Chấp hành Trung ương Đảng từ 19/6 đến 06/7/1973.",
+        "Hội nghị Bộ Chính trị, Ban Chấp hành Trung ương Đảng từ 14/4 đến 26/4/1975."
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 54,
+      "question": "Chiến dịch Tây Nguyên năm 1975 được mang mật danh là gì?",
+      "options": [
+        "Chiến dịch 275.",
+        "Chiến dịch 719.2.",
+        "Chiến dịch 375.",
+        "Chiến dịch Tây Nguyên."
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 55,
+      "question": "Ai được phân công là Tư lệnh Mặt trận Tây Nguyên năm 1975?",
+      "options": [
+        "Đại tướng Văn Tiến Dũng.",
+        "Đại tướng Lê Trọng Tấn.",
+        "Trung tướng Hoàng Minh Thảo.",
+        "Trung tướng Hoàng Cầm."
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "id": 56,
+      "question": "Sau khi hoàn thành việc chuẩn bị chiến lược cả về thế và lực, cuộc tổng tiến công và nổi dậy mùa xuân năm 1975 được tiến hành vào ngày, tháng, năm nào?",
+      "options": [
+        "Ngày 10/3/1975.",
+        "Ngày 04/3/1975.",
+        "Ngày 14/4/1975.",
+        "Ngày 26/4/1975."
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 57,
+      "question": "Tổng tư lệnh quân đội và lính viễn chinh Mỹ rút khỏi miền Nam Việt Nam vào ngày, tháng, năm nào?",
+      "options": [
+        "27/01/1973.",
+        "29/3/1973.",
+        "03/4/1973.",
+        "25/5/1973."
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 58,
+      "question": "Ngày 25/3/1975, Bộ Chính trị đã đưa ra quyết định quan trọng nào?",
+      "options": [
+        "Giải phóng miền Nam trong năm 1975.",
+        "Thần tốc, thần tốc hơn nữa, táo bạo táo bạo hơn nữa, tranh thủ từng giờ, từng phút, xốc tới mặt trận giải phóng miền Nam. Quyết chiến và quyết thắng.",
+        "Hoàn thành giải phóng miền Nam trước mùa mưa.",
+        "Đoàn kết, đoàn kết, đại đoàn kết - thành công, thành công, đại thành công."
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 59,
+      "question": "Trong mỗi cuộc tiến công của quân ta, Tổng thống chính quyền Sài Gòn Nguyễn Văn Thiệu và các tướng lĩnh luôn yêu cầu binh lính phải làm gì?",
+      "options": [
+        "Tử thủ.",
+        "Quyết chiến.",
+        "Quyết đánh.",
+        "Đoàn kết."
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 60,
+      "question": "Chiếc xe tăng đầu tiên húc đổ cổng chính Dinh Độc Lập mang số hiệu mấy?",
+      "options": [
+        "390.",
+        "843.",
+        "093.",
+        "834."
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 61,
+      "question": "Tổng thống nào của chính quyền Việt Nam Cộng hòa tuyên bố đầu hàng quân giải phóng không điều kiện?",
+      "options": [
+        "Ngô Đình Diệm",
+        "Nguyễn Văn Thiệu",
+        "Trần Văn Hương",
+        "Dương Văn Minh"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "id": 62,
+      "question": "Ai là người đã cắm lá cờ của Mặt trận Dân tộc giải phóng miền Nam Việt Nam lên nóc Dinh Độc Lập?",
+      "options": [
+        "Đồng chí Trần Can",
+        "Đồng chí Bùi Quang Thận",
+        "Đồng chí Phạm Chánh Trực",
+        "Đồng chí Nguyễn Hữu Tiến"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 63,
+      "question": "Ai là người được mệnh danh là “điệp viên hoàn hảo”?",
+      "options": [
+        "Đồng chí Vũ Ngọc Nhạ",
+        "Đồng chí Phạm Xuân Ẩn",
+        "Đồng chí Phạm Ngọc Thảo",
+        "Đồng chí Hoàng Minh Đảo"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 64,
+      "question": "Tinh thần “Đi nhanh đến, đánh nhanh thắng” và khí thế “thần tốc, táo bạo, bất ngờ, chắc thắng”. Đó là tinh thần và khí thế ra quân của dân ta trong chiến dịch nào?",
+      "options": [
+        "Chiến dịch Tây Nguyên",
+        "Chiến dịch Huế - Đà Nẵng",
+        "Chiến dịch Buôn Ma Thuột",
+        "Chiến dịch Hồ Chí Minh lịch sử"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "id": 65,
+      "question": "Phương châm đánh mà Bộ Chính trị đề ra trong kế hoạch giải phóng miền Nam là gì?",
+      "options": [
+        "“Đánh nhanh, thắng nhanh”",
+        "“Tích cực, chủ động, cơ động, linh hoạt”",
+        "“Đánh ăn chắc, đánh chắc thắng”",
+        "“Thần tốc, táo bạo, bất ngờ, chắc thắng”"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "id": 66,
+      "question": "Anh hùng lực lượng vũ trang nhân dân nào đã bắn rơi 07 máy bay các loại của Mỹ và có câu nói nổi tiếng “Ở Việt Nam, ra ngõ là gặp anh hùng”?",
+      "options": [
+        "Anh hùng LLVT Phạm Tuân",
+        "Anh hùng LLVT Nguyễn Văn Bảy",
+        "Anh hùng LLVT Vũ Xuân Thiều",
+        "Anh hùng LLVT Vũ Ngọc Đỉnh"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 67,
+      "question": "Người nữ anh hùng nào được mệnh danh là “người con gái thép” vác bao đạn nặng gấp 02 lần trọng lượng cơ thể của mình trong kháng chiến chống Mỹ cứu nước?",
+      "options": [
+        "Nữ Anh hùng Ngô Thị Tuyển",
+        "Nữ Anh hùng Phạm Thị Đào",
+        "Nữ Anh hùng Trần Thị Kỷ",
+        "Nữ Anh hùng Huỳnh Thị Ngọc"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 68,
+      "question": "Chiến thắng “Điện Biên Phủ trên không” ta đã bắn rơi bao nhiêu máy bay B52 và bao nhiêu chiếc F-111 của đế quốc Mỹ?",
+      "options": [
+        "31 chiếc B52 và 08 chiếc F-111",
+        "32 chiếc B52 và 07 chiếc F-111",
+        "33 chiếc B52 và 06 chiếc F-111",
+        "34 chiếc B52 và 05 chiếc F-111"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 69,
+      "question": "Chiến thắng “Điện Biên Phủ trên không” ta đã bắn rơi bao nhiêu máy bay của đế quốc Mỹ?",
+      "options": [
+        "Bắn rơi 81 máy bay",
+        "Bắn rơi 91 máy bay",
+        "Bắn rơi 101 máy bay",
+        "Bắn rơi 111 máy bay"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 70,
+      "question": "Trận chiến đấu “Điện Biên Phủ trên không” của quân và dân miền Bắc đánh bại cuộc tập kích chiến lược quy mô lớn bằng máy bay B-52 vào Hà Nội, Hải Phòng và một số địa phương của miền Bắc nước ta diễn ra trong thời gian nào?",
+      "options": [
+        "Từ ngày 17/12 đến ngày 30/12/1972",
+        "Từ ngày 18/12 đến ngày 30/12/1972",
+        "Từ ngày 19/12 đến ngày 31/12/1972",
+        "Từ ngày 08/12 đến ngày 28/12/1972"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 71,
+      "question": "Tháng 02/1971, quân và dân Việt Nam cùng với quân và dân Lào đánh bại hoàn toàn cuộc hành quân nào của ngụy quyền Sài Gòn?",
+      "options": [
+        "Cuộc hành quân “Lam Sơn 719” ở Đường 9 - Nam Lào",
+        "Cuộc hành quân “Mãnh Hổ 519” ở Đường 20 - Tây Lào",
+        "Cuộc hành quân “Gian-xơn-ci-ty” ở Đường 19 - Trung Lào",
+        "Cuộc hành quân “Hai Gọng Kìm” ở Đường 11 - Nam Lào"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 72,
+      "question": "“… năm qua thắng lợi vẻ vang, năm này tuyền tuyến chắc càng thắng to, vì độc lập vì tự do, đánh cho Mỹ cút, đánh cho ngụy nhào…” là những câu thơ Bác Hồ gửi cho quân và dân ta vào thời gian nào?",
+      "options": [
+        "Xuân Mậu Thân - 1968",
+        "Xuân Kỷ Dậu - 1969",
+        "Xuân Canh Tuất - 1970",
+        "Xuân Tân Hợi – 1971"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 73,
+      "question": "Chiến dịch Đường 9 - Khe Sanh diễn ra vào thời gian nào?",
+      "options": [
+        "Từ 20/1 đến 15/7/1968",
+        "Từ 22/1 đến 25/7/1968",
+        "Từ 30/1 đến 25/7/1968",
+        "Từ 30/1 đến 15/7/1968"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 74,
+      "question": "Chiến thắng nào đánh dấu chiến công đầu tiên của Quân giải phóng miền Nam trên chiến trường miền Đông Nam bộ trong cuộc kháng chiến chống Mỹ, cứu nước?",
+      "options": [
+        "Chiến thắng La Ngà",
+        "Chiến thắng Bình Giã",
+        "Chiến thắng Núi Tô",
+        "Chiến thắng Xoài Mút"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 75,
+      "question": "Phong trào “Thi đua Ấp Bắc, giết giặc lập công” do ai phát động?",
+      "options": [
+        "Do Trung ương Đảng phát động",
+        "Do Quân ủy Trung ương phát động",
+        "Do Trung ương Cục miền Nam phát động",
+        "Do tỉnh ủy Tiền Giang phát động"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 76,
+      "question": "Chiến thắng Ấp Bắc (Mỹ Tho) vào thời gian nào?",
+      "options": [
+        "Ngày 01/02/1963",
+        "Ngày 02/01/1963",
+        "Ngày 12/01/1963",
+        "Ngày 11/02/1963"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 77,
+      "question": "Bản chất của chiến lược “chiến tranh đặc biệt” mà chính quyền tay sai Ngô Đình Diệm và đế quốc Mỹ đã đề ra trong chiến tranh xâm lược Việt Nam giai đoạn 1961 - 1965 là?",
+      "options": [
+        "Sử dụng lực lượng cố vấn Mỹ, củng cố tiền đồn",
+        "Sử dụng sức mạnh quân sự trấn áp lực lượng của ta",
+        "Dùng người Việt đánh người Việt",
+        "Thiết lập ảnh hưởng lâu dài của Mỹ lên miền Nam Việt Nam"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "id": 78,
+      "question": "Hãy cho biết ai là tác giả của 02 câu thơ nổi tiếng “Xẻ dọc Trường Sơn, đi cứu nước Mà lòng phơi phới dậy tương lai…”?",
+      "options": [
+        "Nhà thơ Chế Lan Viên",
+        "Nhà thơ Hoàng Cầm",
+        "Nhà thơ Huy Cận",
+        "Nhà thơ Tố Hữu"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "id": 79,
+      "question": "Phong trào “Xếp bút nghiên lên đường cầm súng/Học người xưa đi cứu non sông” do ai phát động?",
+      "options": [
+        "Học sinh, sinh viên yêu nước miền Bắc",
+        "Trung ương đoàn",
+        "Hội thanh niên Việt Nam",
+        "Hội tri thức trẻ Việt Nam"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 80,
+      "question": "Khẩu hiệu “Một tấc không đi, một li không rời” là quyết tâm của đồng bào miền Nam Việt Nam trong cuộc đấu tranh nào của giai đoạn 1961 - 1965?",
+      "options": [
+        "Đấu tranh chống phá sự càn quét của địch",
+        "Đấu tranh chống lại sự cướp bóc của bè lũ tay sai",
+        "Chống và phá ấp chiến lược",
+        "Đấu tranh chống lại chính sách chia để trị của bè lũ tay sai"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 81,
+      "question": "Năm 1961, đế quốc Mỹ đề ra “Kế hoạch Xtalây - Taylo” để tiến hành “chiến tranh đặc biệt” hòng “bình định” miền Nam Việt Nam trong bao nhiêu tháng?",
+      "options": [
+        "16 tháng",
+        "17 tháng",
+        "18 tháng",
+        "19 tháng"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 82,
+      "question": "Mặt trận dân tộc giải phóng miền Nam Việt Nam ra đời vào ngày nào?",
+      "options": [
+        "Ngày 20/12/1960",
+        "Ngày 21/12/1960",
+        "Ngày 22/12/1960",
+        "Ngày 23/12/1960"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 83,
+      "question": "Phong trào “Đồng khởi” của nhân dân Bến Tre diễn ra vào ngày nào?",
+      "options": [
+        "Ngày 07/01/1960",
+        "Ngày 07/02/1960",
+        "Ngày 17/01/1960",
+        "Ngày 27/01/1960"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 84,
+      "question": "Sự kiện nào sau đây trong giai đoạn 1954 - 1960 đánh dấu bước phát triển nhảy vọt của cách mạng miền Nam Việt Nam?",
+      "options": [
+        "Phong trào chống phá bình định",
+        "Phong trào phá Ấp chiến lược",
+        "Phong trào “Ba sẵn sàng”",
+        "Phong trào Đồng khởi"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "id": 85,
+      "question": "Tổng thống Dương Văn Minh tuyên bố đầu hàng cách mạng vào thời gian nào?",
+      "options": [
+        "10 giờ, ngày 30/4/1975",
+        "11 giờ, ngày 30/4/1975",
+        "11 giờ 30 phút, ngày 30/4/1975",
+        "12 giờ, ngày 30/4/1975"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 86,
+      "question": "Lúc cao điểm, Mỹ đã sử dụng bao nhiêu tàu chiến và tàu đổ bộ trong chiến tranh Việt Nam?",
+      "options": [
+        "75 tàu chiến và tàu đổ bộ",
+        "65 tàu chiến và tàu đổ bộ",
+        "57 tàu chiến và tàu đổ bộ",
+        "56 tàu chiến và tàu đổ bộ"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 87,
+      "question": "Cuộc Tổng tiến công và nổi dậy Xuân 1975 trải qua 3 chiến dịch lớn là:",
+      "options": [
+        "Huế, Tây Nguyên - Đà Nẵng, Hồ Chí Minh",
+        "Tây Nguyên, Huế - Đà Nẵng, Hồ Chí Minh",
+        "Huế - Tây Nguyên, Đà Nẵng, Hồ Chí Minh",
+        "Đà Nẵng, Tây Nguyên, Hồ Chí Minh"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 88,
+      "question": "Sau thắng lợi của chiến dịch Tây Nguyên và Huế - Đà Nẵng, Bộ Chính trị Trung ương Đảng Lao động Việt Nam đã xác định thời điểm để hoàn thành sớm quyết tâm giải phóng miền Nam khi nào?",
+      "options": [
+        "Trong năm 1975",
+        "Muộn nhất là năm 1976",
+        "Trước mùa mưa năm 1975",
+        "Trước năm 1976"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "id": 89,
+      "question": "Thắng lợi của chiến dịch nào đã chuyển cuộc kháng chiến chống Mỹ, cứu nước của nhân dân Việt Nam sang giai đoạn tổng tiến công chiến lược để giải phóng hoàn toàn miền Nam?",
+      "options": [
+        "Huế - Đà Nẵng",
+        "Đường số 14 - Phước Long",
+        "Tây Nguyên",
+        "Đường 9 - Nam Lào"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "id": 90,
+      "question": "Tốc độ “một ngày bằng hai mươi năm” là chủ trương của chiến dịch nào trong năm 1975?",
+      "options": [
+        "Chiến dịch Huế - Đà Nẵng",
+        "Chiến dịch Huế - Đà Nẵng và chiến dịch Hồ Chí Minh",
+        "Chiến dịch Tây Nguyên",
+        "Chiến dịch Hồ Chí Minh"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "id": 91,
+      "question": "Thắng lợi nào của nhân dân Việt Nam đã đi vào lịch sử thế giới như một chiến công vĩ đại của thế kỷ XX, một sự kiện có tầm quan trọng quốc tế to lớn và có tính thời đại sâu sắc?",
+      "options": [
+        "Cuộc kháng chiến chống thực dân Pháp (1945 - 1954)",
+        "Trận “Điện Biên Phủ trên không” (năm 1972)",
+        "Cuộc kháng chiến chống Mỹ, cứu nước (1954 - 1975)",
+        "Chiến dịch Điện Biên Phủ (năm 1954)"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "id": 92,
+      "question": "Ấp chiến lược được coi là “xương sống” của chiến lược chiến tranh nào của Mỹ thực hiện ở miền Nam Việt Nam từ 1961-1965?",
+      "options": [
+        "Đông Dương hóa chiến tranh",
+        "Chiến tranh cục bộ",
+        "Việt Nam hóa chiến tranh",
+        "Chiến tranh đặc biệt"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "id": 93,
+      "question": "Chiến thắng nào đánh dấu sự phá sản hoàn toàn của chiến lược “Chiến tranh đặc biệt” của Mỹ ở miền Nam Việt Nam?",
+      "options": [
+        "An Lão (Bình Định), Ba Gia (Quảng Ngãi), Đồng Xoài (Bình Phước)",
+        "Ấp Bắc (Mỹ Tho)",
+        "Bình Giã (Bà Rịa)",
+        "An Lão (Bình Định)"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 94,
+      "question": "Âm mưu cơ bàn của chiến lược 'Việt Nam hóa chiến tranh' là?",
+      "options": [
+        "Rút dần quân Mỹ về nước",
+        "Tận dựng xương máu người Đông Dương",
+        "Đề cao học thuyết Ních-Xơn",
+        "'Dùng người Việt đánh người Việt'"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "id": 95,
+      "question": "Mỹ tiến hành chiến tranh phá hoại miền Bắc lần thứ nhất nhằm:",
+      "options": [
+        "'Trả đũa' việc quân giải phóng miền Nam tiến công doanh trại Mỹ ở Pleiku",
+        "Phá hoại tiềm lực kinh tế, quốc phòng, công cuộc xây dựng CNXH ở miền Bắc",
+        "Ngăn chặn nguồn chi viện từ bên ngoài vào miền Bắc",
+        "Uy hiếp tinh thần, làm lung lay ý chí chống Mỹ của nhân dân ta"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 96,
+      "question": "Trận đánh quyết định của ta buộc Mỹ tuyên bố ngừng hẳn các hoạt động chống phá miền Bắc và kí với ta hiệp định Pari năm 1973 là:",
+      "options": [
+        "Trận Ngọc Hồi – Đống Đa",
+        "Trận Điện Biên Phủ trên không",
+        "Trận Điện Biên Phủ trên cao",
+        "Trận Điện Biên Phủ mặt đất"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 97,
+      "question": "Quyết tâm 'Một tấc không đi, một li không rời' được nhân dân miền Nam thực hiện trong việc chống lại thủ đoạn nào của Mỹ trong Chiến lược 'Chiến tranh đặc biệt' (1961 – 1965)?",
+      "options": [
+        "Tăng nhanh lực lượng quân đội Sài Gòn",
+        "Dồn dân, lập 'Ấp chiến lược'",
+        "Sử dụng phổ biến chiến thuật mới 'trực thăng vận', 'thiết xa vận'",
+        "Mở các cuộc hành quân càn quét"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 98,
+      "question": "Ấp chiến lược được coi là 'xương sống' của chiến lược chiến tranh nào của Mỹ thực hiện ở miền Nam Việt Nam từ 1961-1965?",
+      "options": [
+        "Đông Dương hóa chiến tranh",
+        "Chiến tranh cục bộ",
+        "Việt Nam hóa chiến tranh",
+        "Chiến tranh đặc biệt"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "id": 99,
+      "question": "Bổ sung những từ còn thiếu vào mệnh lệnh của Đại tướng Võ Nguyên Giáp trong bức điện khẩn ngày 07/4/1975: '…, … hơn nữa. …, …. hơn nữa. Tranh thủ từng giờ, từng phút, xốc tới Mặt trận, giải phóng miền Nam. Quyết chiến và quyết thắng'?",
+      "options": [
+        "táo bạo, thần tốc",
+        "thần tốc, táo bạo",
+        "táo bạo, táo bạo; thần tốc, thần tốc",
+        "thần tốc, thần tốc; táo bạo, táo bạo"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "id": 100,
+      "question": "Ai là người đã lập kỷ lục về quãng đường đi bộ gùi hàng trên tuyến đường mòn Trường Sơn huyền thoại?",
+      "options": [
+        "Anh hùng Lực lượng vũ trang nhân dân Đèo Văn Khổ",
+        "Anh hùng Lực lượng vũ trang nhân dân Võ Văn Cả",
+        "Anh hùng Lực lượng vũ trang nhân dân Nguyễn Viết Sinh",
+        "Anh hùng Lực lượng vũ trang nhân dân Nguyễn Viết Hiền"
+      ],
+      "correctAnswer": 1
+    }
+  ]
+}

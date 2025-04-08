@@ -4,40 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HÀNH TRÌNH LỊCH SỬ</title>
+    <link rel="stylesheet" href="./styles/general.css">
     <link rel="stylesheet" href="./styles/index.css">
     <link rel="shortcut icon" href="./assets/icon.ico">
 </head>
 <body>
-    <div id="form">
-        <div class="form-container">
-            <h2>Đăng ký tham gia</h2>
-            <form action="">
-                <div class="input-group">
-                    <label for="email">Họ tên</label>
-                    <input type="text" id="email" placeholder="Nhập họ tên của bạn" required>
-                </div>
-                <div class="input-group">
-                    <label for="password">Mật khẩu</label>
-                    <input type="password" id="password" placeholder="Nhập mật khẩu" required>
-                </div>
-                <button type="submit" class="submit-btn">Đăng ký</button>
-            </form>
-        </div>
+    <div id="noti"></div>
+
+    <div id="main-bg">
+        <img src="./assets/bg.png" alt="">
     </div>
 
+    <br><br>
     <div id="title">
         <h2>Cuộc thi</h2>
         <h1>HÀNH TRÌNH LỊCH SỬ</h1>
         <p>Kỷ niệm 50 năm ngày Giải phóng miền Nam, thống nhất đất nước</p>
         <i>30/4/1975 - 30/4/2025</i>
     </div>
+    <br><br>
 
-    <button id="start-btn" onclick="startGame()">Bắt đầu chơi</button>
-
-    <div id="main-bg">
-        <img src="./assets/bg.png" alt="">
+    <div id="form">
+        <div class="form-container">
+            <h2>Đăng ký tham gia</h2>
+            <form action="">
+                <div class="input-group">
+                    <label for="name">Họ tên</label>
+                    <input type="text" id="name" placeholder="Nhập họ tên của bạn" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Mật khẩu</label>
+                    <input type="password" id="password" placeholder="Nhập mật khẩu (tối thiểu 6 kí tự)" required>
+                </div>
+                <button type="submit" class="submit-btn">Đăng ký</button>
+            </form>
+        </div>
     </div>
 
-    <script src="./scripts/index.js"></script>
+    <button id="start-btn">Bắt đầu chơi</button>
+
+    <br><br>
+    <div id="rules-box">
+        <h2>Thể Lệ Chơi</h2>
+        <ol>
+            <li>Người chơi cần đăng ký để tham gia cuộc thi, chơi lại chỉ cần nhập lại thông tin đăng ký.</li>
+            <li>Trò chơi gồm 100 câu hỏi, mỗi câu hỏi sẽ có 4 lựa chọn, chỉ có 1 đáp án đúng.</li>
+            <li>Để được trả lời câu hỏi, người chơi cần bấm phím CÁCH để nhảy qua chướng ngại vật.</li>
+            <li>Nếu không thể vượt qua chướng ngại vật, người chơi phải chơi lại từ đầu.</li>
+            <li>Điểm số sẽ chỉ được lưu khi người chơi hoàn thành toàn bộ 100 câu hỏi.</li>
+            <li>Số lần chơi là không giới hạn.</li>
+            <li>Thời gian trả lời cho mỗi câu hỏi là 10 giây, hết thời gian sẽ không được tính điểm.</li>
+            <li>Điểm số sẽ được tính dựa trên số câu trả lời đúng, khi trả lời sai sẽ không bị trừ điểm.</li>
+            <li>10 người chơi có số điểm cao nhất và thời gian nhanh nhất sẽ được vào bảng xếp hạng.</li>
+        </ol>
+    </div>
+
+    <br><br>
+    <div id="leaderboard">
+        <h2>Bảng Xếp Hạng</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Hạng</th>
+                    <th>Tên</th>
+                    <th>Điểm</th>
+                    <th>Thời gian</th>
+                    <th>Vào lúc</th>
+                </tr>
+            </thead>
+            <tbody id="leaderboard-body">
+            </tbody>
+        </table>
+    </div>
+    
+    <br><br><br><br>
+    
+    <script type="module" src="./scripts/noti.js"></script>
+    <script type="module" src="./scripts/index.js"></script>
 </body>
 </html>
