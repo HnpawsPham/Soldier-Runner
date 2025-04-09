@@ -27,15 +27,32 @@
     <div id="form">
         <div class="form-container">
             <h2>Đăng ký tham gia</h2>
+            <i>Web sẽ tự chuyển sang đăng nhập nếu tài khoản đã được đăng ký.</i>
+
             <form action="">
                 <div class="input-group">
                     <label for="name">Họ tên</label>
                     <input type="text" id="name" placeholder="Nên gõ không dấu" required>
                 </div>
+
                 <div class="input-group">
                     <label for="password">Mật khẩu</label>
                     <input type="password" id="password" placeholder="Nhập mật khẩu (tối thiểu 6 kí tự)" required>
                 </div>
+
+                <div class="input-group">
+                    <label for="unit">Đơn vị</label>
+                    <select id="unit" required>
+                        <option value="">Chọn đơn vị</option>
+                        <option value="phong-nghiep-vu-1">Phòng Nghiệp vụ 1</option>
+                        <option value="phong-nghiep-vu-2">Phòng Nghiệp vụ 2</option>
+                        <option value="van-phong">Văn phòng</option>
+                        <option value="phong-kiem-tra-gqkntc">Phòng Kiểm tra GQKNTC</option>
+                        <option value="phong-ke-hoach-tai-chinh">Phòng Kế hoạch Tài chính</option>
+                        <option value="phong-to-chuc-can-bo">Phòng Tổ chức Cán bộ</option>
+                    </select>
+                </div>
+
                 <button type="submit" class="submit-btn">Đăng ký</button>
             </form>
         </div>
@@ -69,6 +86,7 @@
                     <th>Hạng</th>
                     <th>Tên</th>
                     <th>Điểm</th>
+                    <th>Đơn vị</th>
                     <th>Thời gian</th>
                     <th>Vào lúc</th>
                 </tr>

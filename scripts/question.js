@@ -1,5 +1,6 @@
 export let questions = [];
-const totalQuestion = 40;
+export const totalQuestion = 30;
+export const timePerQuestion = 30;
 export let currentQuestionIndex = 0;
 
 export async function loadQuestions() {

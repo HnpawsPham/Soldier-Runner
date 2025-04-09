@@ -5,6 +5,7 @@ import { visibleNoti } from './noti.js';
 const form = document.querySelector("form");
 const nameInp = document.getElementById("name");
 const passInp = document.getElementById("password");
+const unitInp = document.getElementById("unit");
 const startGameBtn = document.getElementById("start-btn");
 
 //#region SIGNUP
@@ -24,17 +25,27 @@ function startGame() {
 startGameBtn.addEventListener("click", () => startGame());
 
 // Form submit handle
+const unitNames = {
+    "phong-nghiep-vu-1": "Phòng Nghiệp vụ 1",
+    "phong-nghiep-vu-2": "Phòng Nghiệp vụ 2",
+    "van-phong": "Văn phòng",
+    "phong-kiem-tra-gqkntc": "Phòng Kiểm tra GQKNTC",
+    "phong-ke-hoach-tai-chinh": "Phòng Kế hoạch Tài chính",
+    "phong-to-chuc-can-bo": "Phòng Tổ chức Cán bộ"
+};
+
 form.addEventListener("submit", async (event) => {
     event.preventDefault();
 
     let name = nameInp.value.trim();
     const password = passInp.value.trim();
+    const unit = unitInp.value;
 
     // Sanitize the name
     name = name.replace(/[^a-zA-Z0-9]/g, ""); 
 
     // Validate input
-    if (name === "" || password === "") {
+    if (name === "" || password === "" || unit === "") { 
         visibleNoti("Vui lòng nhập đầy đủ thông tin!", 3000);
         return;
     }
@@ -53,6 +64,7 @@ form.addEventListener("submit", async (event) => {
         // Prepare data
         const userData = {
             name: name,
+            unit: unit, 
         };
 
         // Send data
@@ -70,7 +82,7 @@ form.addEventListener("submit", async (event) => {
             } 
             catch (loginError) {
                 console.error("Error logging in:", loginError);
-                visibleNoti("Đã xảy ra lỗi khi đăng nhập, vui lòng thử lại!", 3000);
+                visibleNoti("Đã xảy ra lỗi, vui lòng kiểm tra lại thông tin đăng nhập!", 3000);
             }
         } 
         else {
@@ -103,29 +115,31 @@ async function loadLeaderboard() {
                     }
                 }
 
-                // If player is on leaderboard
+                // check if user is checked to make sure there's no duplication
                 if (!entries[uid]) {
                     entries[uid] = {
                         name: usersData && usersData[uid] ? usersData[uid].name : 'Người chơi',
                         score: score,
                         time: time,
-                        formattedTime: new Date(parseInt(timestamp)).toLocaleString(),
+                        unit: usersData && usersData[uid] ? usersData[uid].unit : 'N/A',
+                        formattedTime: res.totalTime || 'N/A', 
                         timestamp: parseInt(timestamp)
                     };
                 } else {
-                    // Update if the attempt is better
+                    //  update if this attempt is better
                     if (score > entries[uid].score || 
                         (score === entries[uid].score && time < entries[uid].time)) {
                         entries[uid].score = score;
                         entries[uid].time = time;
-                        entries[uid].formattedTime = new Date(parseInt(timestamp)).toLocaleString();
+                        entries[uid].unit = usersData && usersData[uid] ? usersData[uid].unit : 'N/A';
+                        entries[uid].formattedTime = res.totalTime || 'N/A'; 
                         entries[uid].timestamp = parseInt(timestamp);
                     }
                 }
             });
         });
     
-        // sort the leaderboard
+        // sort
         const sortedEntries = Object.entries(entries).map(([uid, data]) => ({ uid, ...data }));
         sortedEntries.sort((a, b) => {
             if (b.score !== a.score) {
@@ -143,13 +157,14 @@ async function loadLeaderboard() {
                 <td>${index + 1}</td>
                 <td>${entry.name}</td>
                 <td>${entry.score}</td>
-                <td>${entry.time !== 0 ? entry.time : 'N/A'}</td>
-                <td>${entry.formattedTime}</td>
+                <td>${entry.unit !== 'N/A' ? unitNames[entry.unit] : 'N/A'}</td>
+                <td>${entry.formattedTime !== 'N/A' ? entry.formattedTime : 'N/A'}</td>
+                <td>${new Date(entry.timestamp).toLocaleString()}</td> <!-- Hiển thị thời gian -->
             `;
             leaderboardBody.appendChild(row);
         });
     } else {
-        leaderboardBody.innerHTML = '<tr><td colspan="5">Chưa có dữ liệu.</td></tr>';
+        leaderboardBody.innerHTML = '<tr><td colspan="6">Chưa có dữ liệu.</td></tr>';
     }
 }
 

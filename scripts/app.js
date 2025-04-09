@@ -1,6 +1,6 @@
 import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js";
 import { visibleNoti } from "./noti.js";
-import { loadQuestions, getNextQuestion, questions } from "./question.js";
+import { loadQuestions, getNextQuestion, questions, totalQuestion,timePerQuestion } from "./question.js";
 import { restartWithNewTrack, playLoseSound, playWinSound, stopAllSounds, initAudio } from "./audio.js";
 import { saveGameRes, app } from "./firebase.js";
 
@@ -519,8 +519,6 @@ function startGameLoops() {
 
 // #region QUESTIONS
 
-const totalQuestion = 40;
-
 let questionTimer;
 let currentQuestion;
 let isQuestionActive = false;
@@ -562,13 +560,13 @@ function showQuestion() {
     board.style.display = 'flex';
     
     // Start timer
-    let timeLeft = 10;
-    timeLeftElement.textContent = timeLeft;
+    let timeLeft = timePerQuestion;
+    timeLeftElement.textContent = `  Còn lại: ${timeLeft} giây`;
     
     // Add timer style
     questionTimer = setInterval(() => {
         timeLeft--;
-        document.getElementById('time-left').textContent = timeLeft;
+        document.getElementById('time-left').textContent = `  Còn lại: ${timeLeft} giây`;
         
         if (timeLeft <= 0) {
             // Time's up
