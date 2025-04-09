@@ -90,44 +90,52 @@ async function loadLeaderboard() {
     leaderboardBody.innerHTML = ''; 
 
     if (leaderboardData) {
-        const entries = [];
+        const entries = {};
     
         Object.entries(leaderboardData).forEach(([uid, timestamps]) => {
             Object.entries(timestamps).forEach(([timestamp, res]) => {
-                let totalTimeInSeconds = 0;
+                const score = res.score || 0;
+                let time = 0;
                 if (res.totalTime && res.totalTime !== 'N/A') {
                     const timeParts = res.totalTime.split(':');
                     if (timeParts.length === 2) {
-                        totalTimeInSeconds = parseInt(timeParts[0]) * 60 + parseInt(timeParts[1]);
+                        time = parseInt(timeParts[0]) * 60 + parseInt(timeParts[1]);
                     }
                 }
-    
-                entries.push({
-                    uid,
-                    name: usersData && usersData[uid] ? usersData[uid].name : 'Người chơi',
-                    score: res.score || 0,
-                    totalTime: res.totalTime || 'N/A',
-                    totalTimeInSeconds: totalTimeInSeconds,
-                    formattedTime: new Date(parseInt(timestamp)).toLocaleString(),
-                    timestamp: parseInt(timestamp)
-                });
+
+                // If player is on leaderboard
+                if (!entries[uid]) {
+                    entries[uid] = {
+                        name: usersData && usersData[uid] ? usersData[uid].name : 'Người chơi',
+                        score: score,
+                        time: time,
+                        formattedTime: new Date(parseInt(timestamp)).toLocaleString(),
+                        timestamp: parseInt(timestamp)
+                    };
+                } else {
+                    // Update if the attempt is better
+                    if (score > entries[uid].score || 
+                        (score === entries[uid].score && time < entries[uid].time)) {
+                        entries[uid].score = score;
+                        entries[uid].time = time;
+                        entries[uid].formattedTime = new Date(parseInt(timestamp)).toLocaleString();
+                        entries[uid].timestamp = parseInt(timestamp);
+                    }
+                }
             });
         });
     
-        entries.sort((a, b) => {
+        // sort the leaderboard
+        const sortedEntries = Object.entries(entries).map(([uid, data]) => ({ uid, ...data }));
+        sortedEntries.sort((a, b) => {
             if (b.score !== a.score) {
                 return b.score - a.score;
             }
-    
-            if (a.totalTimeInSeconds !== b.totalTimeInSeconds) {
-                return a.totalTimeInSeconds - b.totalTimeInSeconds;
-            }
-    
-            return b.timestamp - a.timestamp;
+            return a.time - b.time; 
         });
     
         // top 10
-        const top10Entries = entries.slice(0, 10);
+        const top10Entries = sortedEntries.slice(0, 10);
     
         top10Entries.forEach((entry, index) => {
             const row = document.createElement('tr');
@@ -135,7 +143,7 @@ async function loadLeaderboard() {
                 <td>${index + 1}</td>
                 <td>${entry.name}</td>
                 <td>${entry.score}</td>
-                <td>${entry.totalTime}</td>
+                <td>${entry.time !== 0 ? entry.time : 'N/A'}</td>
                 <td>${entry.formattedTime}</td>
             `;
             leaderboardBody.appendChild(row);
