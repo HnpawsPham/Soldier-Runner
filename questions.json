@@ -31,7 +31,7 @@
         "Hiệp định Hòa bình Đông Dương",
         "Hiệp định về Chấm dứt chiến tranh, lập lại hòa bình ở Việt Nam"
       ],
-      "correctAnswer": 0
+      "correctAnswer": 3
     },
     {
       "id": 4,
@@ -131,13 +131,13 @@
         "Trận Vạn Tường",
         "Trận Núi Thành"
       ],
-      "correctAnswer": 0
+      "correctAnswer": 2
     },
     {
       "id": 14,
       "question": "Từ lúc quân ta được lệnh nổ súng mở đầu cho chiến dịch Hồ Chí Minh đến khi giải phong Sài Gòn – Gia Định là bao nhiêu ngày?",
       "options": ["5 ngày", "22 ngày", "10 ngày", "15 ngày"],
-      "correctAnswer": 1
+      "correctAnswer": 0
     },
     {
       "id": 15,
@@ -154,7 +154,7 @@
       "id": 16,
       "question": "Sau khi thất thủ ở Tây Nguyên, Huế, Đà Nẵng, địch phải lui về phòng thủ ở đâu?",
       "options": ["Cam Ranh", "Nha Trang", "Phan Rang", "Xuân Lộc"],
-      "correctAnswer": 3
+      "correctAnswer": 2
     },
     {
       "id": 17,
@@ -176,13 +176,13 @@
         "Hội nghị Bộ chính trị mở rộng họp từ 18-12-1974 đến 8-1-1975",
         "Nghị quyết của Bộ Chính trị ngày 25-3-1975"
       ],
-      "correctAnswer": 2
+      "correctAnswer": 3
     },
     {
       "id": 19,
       "question": "Bạn hãy cho biết chiếc xe tăng dẫn đầu đánh chiếm Dinh độc lập mang số bao nhiêu?",
       "options": ["390", "429", "205", "309"],
-      "correctAnswer": 1
+      "correctAnswer": 0
     },
     {
       "id": 20,
@@ -193,13 +193,13 @@
         "Chiến dịch Hồ Chí Minh toàn thắng",
         "Cắm cờ trên nóc Dinh Độc Lập"
       ],
-      "correctAnswer": 0
+      "correctAnswer": 1
     },
     {
       "id": 21,
       "question": "Chiến dịch giải phóng Sài Gòn – Gia Định chính thức đổi tên là Chiến dịch Hồ Chí Minh vào thời gian nào?",
       "options": ["26/3/1975", "29/3/1975", "14/4/1975", "30/4/1975"],
-      "correctAnswer": 0
+      "correctAnswer": 2
     },
     {
       "id": 22,
@@ -216,19 +216,19 @@
       "id": 23,
       "question": "Bạn hãy cho biết trong trận “Điện Biên Phủ trên không” – đòn quyết định đập tan “Uy thế không lực Hoa Kỳ” trên bầu trời Hà Nội, quân và dân ta đã tiêu diệt bao nhiêu chiếc máy bay của địch?",
       "options": ["85 chiếc", "83 chiếc", "82 chiếc", "81 chiếc"],
-      "correctAnswer": 1
+      "correctAnswer": 3
     },
     {
       "id": 24,
       "question": "Có một thành phố được giải phóng vào ngày 26/3/1975 trùng với ngày thành lập Đoàn TNCS Hồ Chí Minh. Bạn hãy cho biết đó là thành phố nào?",
       "options": ["Đà Nẵng", "Huế", "Đắk Lắk", "Buôn Mê Thuột"],
-      "correctAnswer": 0
+      "correctAnswer": 1
     },
     {
       "id": 25,
       "question": "Tỉnh cuối cùng của miền Nam được giải phóng trong cuộc Tổng tiến công Xuân 1975 là tỉnh nào?",
       "options": ["Châu Đốc", "Cà Mau", "Kiên Giang", "Long An"],
-      "correctAnswer": 1
+      "correctAnswer": 0
     },
     {
       "id": 26,
@@ -251,13 +251,13 @@
       "id": 28,
       "question": "Trong cuộc chiến tranh xâm lược Việt Nam, đế quốc Mỹ đã trải qua mấy đời tổng thống?",
       "options": ["5 đời", "4 đời", "3 đời", "2 đời"],
-      "correctAnswer": 1
+      "correctAnswer": 0
     },
     {
       "id": 29,
       "question": "Bạn hãy cho biết chiến dịch giải phóng Sài Gòn - Gia Định chính thức đổi tên là chiến dịch Hồ Chí Minh khi nào?",
       "options": ["26/3/1975", "29/3/1975", "14/4/1975", "30/4/1975"],
-      "correctAnswer": 0
+      "correctAnswer": 2
     },
     {
       "id": 30,
@@ -329,7 +329,7 @@
         "Chiến dịch Hồ Chí Minh năm 1975.",
         "Thắng lợi của cuộc kháng chiến chống Mỹ 1975."
       ],
-      "correctAnswer": 2
+      "correctAnswer": 3
     },
     {
       "id": 37,
@@ -373,7 +373,7 @@
         "Chiến thắng mùa khô lần thứ nhất (1965 – 1966).",
         "Chiến thắng mùa khô lần thứ hai (1966 – 1967)."
       ],
-      "correctAnswer": 0
+      "correctAnswer": 1
     },
     {
       "id": 41,
@@ -384,7 +384,7 @@
         "Trận “Điện Biên Phủ trên không” năm 1972.",
         "Cuộc Tổng tiến công và nổi dậy Xuân 1975."
       ],
-      "correctAnswer": 0
+      "correctAnswer": 1
     },
     {
       "id": 42,
@@ -395,7 +395,7 @@
         "Chiến thắng hai mùa khô (1965 – 1966) và (1966 – 1967).",
         "Cuộc Tổng tiến công Tết Mậu Thân 1968."
       ],
-      "correctAnswer": 3
+      "correctAnswer": 0
     },
     {
       "id": 43,
@@ -406,7 +406,7 @@
         "Buộc Mỹ phải chấp nhận đàm phán với ta ở Pari.",
         "Làm lung lay ý chí xâm lược của Mỹ."
       ],
-      "correctAnswer": 3
+      "correctAnswer": 0
     },
     {
       "id": 44,
@@ -428,7 +428,7 @@
         "Mỹ ký Hiệp định Pari năm 1973.",
         "Cuộc Tổng tiến công và nổi dậy Xuân năm 1975."
       ],
-      "correctAnswer": 3
+      "correctAnswer": 2
     },
     {
       "id": 46,
@@ -483,7 +483,7 @@
         "Mùa khô 1965-1966.",
         "Tổng tiến công và nổi dậy Xuân 1968."
       ],
-      "correctAnswer": 0
+      "correctAnswer": 1
     },
     {
       "id": 51,
@@ -505,7 +505,7 @@
         "520 tỷ USD.",
         "352 tỷ USD."
       ],
-      "correctAnswer": 1
+      "correctAnswer": 0
     },
     {
       "id": 53,
@@ -560,7 +560,7 @@
         "03/4/1973.",
         "25/5/1973."
       ],
-      "correctAnswer": 0
+      "correctAnswer": 1
     },
     {
       "id": 58,
@@ -571,7 +571,7 @@
         "Hoàn thành giải phóng miền Nam trước mùa mưa.",
         "Đoàn kết, đoàn kết, đại đoàn kết - thành công, thành công, đại thành công."
       ],
-      "correctAnswer": 1
+      "correctAnswer": 2
     },
     {
       "id": 59,
@@ -659,7 +659,7 @@
         "Anh hùng LLVT Vũ Xuân Thiều",
         "Anh hùng LLVT Vũ Ngọc Đỉnh"
       ],
-      "correctAnswer": 0
+      "correctAnswer": 1
     },
     {
       "id": 67,
@@ -681,7 +681,7 @@
         "33 chiếc B52 và 06 chiếc F-111",
         "34 chiếc B52 và 05 chiếc F-111"
       ],
-      "correctAnswer": 0
+      "correctAnswer": 3
     },
     {
       "id": 69,
@@ -758,7 +758,7 @@
         "Do Trung ương Cục miền Nam phát động",
         "Do tỉnh ủy Tiền Giang phát động"
       ],
-      "correctAnswer": 1
+      "correctAnswer": 2
     },
     {
       "id": 76,
@@ -769,7 +769,7 @@
         "Ngày 12/01/1963",
         "Ngày 11/02/1963"
       ],
-      "correctAnswer": 0
+      "correctAnswer": 1
     },
     {
       "id": 77,
@@ -813,7 +813,7 @@
         "Chống và phá ấp chiến lược",
         "Đấu tranh chống lại chính sách chia để trị của bè lũ tay sai"
       ],
-      "correctAnswer": 0
+      "correctAnswer": 2
     },
     {
       "id": 81,
@@ -824,7 +824,7 @@
         "18 tháng",
         "19 tháng"
       ],
-      "correctAnswer": 0
+      "correctAnswer": 2
     },
     {
       "id": 82,
@@ -846,7 +846,7 @@
         "Ngày 17/01/1960",
         "Ngày 27/01/1960"
       ],
-      "correctAnswer": 0
+      "correctAnswer": 2
     },
     {
       "id": 84,
@@ -868,7 +868,7 @@
         "11 giờ 30 phút, ngày 30/4/1975",
         "12 giờ, ngày 30/4/1975"
       ],
-      "correctAnswer": 0
+      "correctAnswer": 2
     },
     {
       "id": 86,
@@ -879,7 +879,7 @@
         "57 tàu chiến và tàu đổ bộ",
         "56 tàu chiến và tàu đổ bộ"
       ],
-      "correctAnswer": 0
+      "correctAnswer": 1
     },
     {
       "id": 87,
@@ -956,11 +956,11 @@
         "Bình Giã (Bà Rịa)",
         "An Lão (Bình Định)"
       ],
-      "correctAnswer": 1
+      "correctAnswer": 2
     },
     {
       "id": 94,
-      "question": "Âm mưu cơ bàn của chiến lược 'Việt Nam hóa chiến tranh' là?",
+      "question": "Âm mưu cơ bản của chiến lược 'Việt Nam hóa chiến tranh' là?",
       "options": [
         "Rút dần quân Mỹ về nước",
         "Tận dựng xương máu người Đông Dương",
@@ -1033,7 +1033,7 @@
         "Anh hùng Lực lượng vũ trang nhân dân Nguyễn Viết Sinh",
         "Anh hùng Lực lượng vũ trang nhân dân Nguyễn Viết Hiền"
       ],
-      "correctAnswer": 1
+      "correctAnswer": 2
     }
   ]
 }

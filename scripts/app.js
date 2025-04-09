@@ -539,10 +539,7 @@ function showQuestion() {
     clearInterval(runAnimInterval);
     player.querySelector('img').src = `./assets/player_idle.png`;
     
-    // Get a question
     currentQuestion = getNextQuestion();
-    
-    // Display question
     questionElement.textContent = currentQuestion.question;
     
     // Display options
@@ -568,8 +565,7 @@ function showQuestion() {
     let timeLeft = 10;
     timeLeftElement.textContent = timeLeft;
     
-    // Add timer styles if needed
-    
+    // Add timer style
     questionTimer = setInterval(() => {
         timeLeft--;
         document.getElementById('time-left').textContent = timeLeft;
@@ -581,7 +577,7 @@ function showQuestion() {
         }
     }, 1000);
     
-    // Hide next button initially
+    // Hide next button 
     nextButton.style.display = 'none';
     
     // Add next button e
