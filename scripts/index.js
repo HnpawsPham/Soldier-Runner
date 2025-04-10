@@ -159,7 +159,7 @@ async function loadLeaderboard() {
                 <td>${entry.score}</td>
                 <td>${entry.unit !== 'N/A' ? unitNames[entry.unit] : 'N/A'}</td>
                 <td>${entry.formattedTime !== 'N/A' ? entry.formattedTime : 'N/A'}</td>
-                <td>${new Date(entry.timestamp).toLocaleString()}</td> <!-- Hiển thị thời gian -->
+                <td>${new Date(entry.timestamp).toLocaleString('en-GB')}</td>
             `;
             leaderboardBody.appendChild(row);
         });
